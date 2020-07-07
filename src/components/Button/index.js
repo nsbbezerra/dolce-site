@@ -58,9 +58,9 @@ export default function ButtonComponent({
         small={small}
         outlined={outlined}
       >
-        {children[0]}
+        {children ? children[0] : ""}
       </Label>
-      <Content>{children[1]}</Content>
+      <Content>{children ? children[1] : ""}</Content>
     </Button>
   );
 }

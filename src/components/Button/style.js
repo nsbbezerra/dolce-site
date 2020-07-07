@@ -10,6 +10,8 @@ export const Button = styled.button`
   display: grid;
   grid-template-columns: 40px 1fr;
   align-items: center;
+  justify-items: center;
+  justify-content: center;
   padding: 0;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -18,7 +20,6 @@ export const Button = styled.button`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   cursor: pointer;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
   transition: all 0.3s;
   &:hover {
     filter: brightness(1.075);
