@@ -10,6 +10,7 @@
   top: 0;
   left: 0;
   right: 0;
+  z-index: 200;
 }
 
 .company-info {
@@ -38,7 +39,7 @@
 
 .social-media-header {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   margin-right: 10px;
   transition: all 0.3s;
   margin-top: 5.5px;
@@ -78,10 +79,9 @@
 
 #menu-app ul li span {
   display: block;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
   cursor: pointer;
   transition: all 0.3s;
   color: #222;

@@ -1,0 +1,26 @@
+.link-footer {
+  display: block;
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #444;
+  line-height: 35px;
+  transition: all 0.3s;
+}
+
+.link-footer:hover {
+  text-decoration: underline;
+}
+
+.link-media {
+  display: block;
+  text-decoration: none;
+  color: #444;
+  font-size: 4rem;
+  transition: all 0.3s;
+}
+
+.link-media:hover {
+  color: #111;
+}
