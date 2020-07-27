@@ -102,7 +102,7 @@ export const Title = styled.h1`
 export const TitleJumbotron = styled.h1`
   color: ${general.colors.dark};
   font-family: "Saira Condensed", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -184,11 +184,7 @@ export const CardAvatarDescritpion = styled.div`
   font-size: 1.5rem;
 `;
 
-export const Jumbotron = styled.div`
+export const Spaced = styled.div`
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: ${general.colors.gray};
-  margin-top: -3px;
+  height: 60px;
 `;

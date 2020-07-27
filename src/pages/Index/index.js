@@ -6,12 +6,9 @@ import {
   FixedLayout,
   CenterContainer,
   Content,
-  CardAvatar,
-  AvatarImg,
-  CardAvatarDescritpion,
-  Jumbotron,
   TitleJumbotron,
   CardMark,
+  Spaced,
 } from "../../styles/style";
 import Grid from "../../components/Grid/index";
 import Card from "../../components/Card/index";
@@ -95,8 +92,9 @@ export default function Index() {
             </Carousel>
           </Content>
 
+          <Spaced />
+
           <Content>
-            <Title>Nós Recomendamos a Você</Title>
             <Grid min={250} max={250} gap={30}>
               <Card
                 title="Camiseta Femenina Santa Lolla"
@@ -173,8 +171,10 @@ export default function Index() {
             </Grid>
           </Content>
 
+          <Spaced />
+
           <Content>
-            <Title>Mais Vendidos</Title>
+            <Title>Ofertas Imperdíveis</Title>
             <Carousel
               slidesPerPage={4}
               arrows
@@ -284,8 +284,10 @@ export default function Index() {
             </Carousel>
           </Content>
 
+          <Spaced />
+
           <Content>
-            <Title>Produtos Promocionais</Title>
+            <Title>Novidades</Title>
             <Carousel
               slidesPerPage={4}
               arrows
@@ -396,6 +398,7 @@ export default function Index() {
           </Content>
         </FixedLayout>
       </CenterContainer>
+      <Spaced />
     </Container>
   );
 }

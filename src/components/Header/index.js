@@ -27,20 +27,35 @@ import {
 } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
 import general from "../../configs/general";
+import { useHistory } from "react-router-dom";
 
 import icone from "../../assets/icon-gold.svg";
 import logo from "../../assets/name-slug.svg";
 
 export default function Header() {
   const [open, setOpen] = useState(true);
+  const history = useHistory();
+  function goToHome() {
+    history.push("/");
+  }
   return (
     <header className="header-app">
       <CenterContainer>
         <FixedLayout>
           <div className="company-info">
             <div className="container-logo">
-              <img alt="Logo Dolce Encanto" src={icone} className="icone-app" />
-              <img alt="Logo Dolce Encanto" src={logo} className="logo-app" />
+              <img
+                alt="Logo Dolce Encanto"
+                src={icone}
+                className="icone-app"
+                onClick={() => goToHome()}
+              />
+              <img
+                alt="Logo Dolce Encanto"
+                src={logo}
+                className="logo-app"
+                onClick={() => goToHome()}
+              />
             </div>
             <div className="right-header">
               <BtnLogin style={{ marginRight: 40 }}>
@@ -70,51 +85,7 @@ export default function Header() {
           <Menu active={open}>
             <MenuContainer>
               <MenuItems>
-                <MenuItem>
-                  NOVIDADES
-                  <SubMenu>
-                    <SubMenuItemsContainer>
-                      <SubMenuTitle>CALÇADOS</SubMenuTitle>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                    </SubMenuItemsContainer>
-                    <SubMenuItemsContainer>
-                      <SubMenuTitle>CALÇADOS</SubMenuTitle>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                    </SubMenuItemsContainer>
-                    <SubMenuItemsContainer>
-                      <SubMenuTitle>CALÇADOS</SubMenuTitle>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                    </SubMenuItemsContainer>
-                    <SubMenuItemsContainer>
-                      <SubMenuTitle>CALÇADOS</SubMenuTitle>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                    </SubMenuItemsContainer>
-                  </SubMenu>
-                </MenuItem>
+                <MenuItem>NOVIDADES</MenuItem>
               </MenuItems>
               <MenuItems>
                 <MenuItem>
@@ -122,7 +93,7 @@ export default function Header() {
                   <SubMenu>
                     <SubMenuItemsContainer>
                       <SubMenuTitle>CALÇADOS</SubMenuTitle>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink to="/produtos">SANDÁLIAS</SubMenuLink>
                       <SubMenuLink>SANDÁLIAS</SubMenuLink>
                       <SubMenuLink>SANDÁLIAS</SubMenuLink>
                       <SubMenuLink>SANDÁLIAS</SubMenuLink>
