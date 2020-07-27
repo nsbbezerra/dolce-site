@@ -20,6 +20,12 @@ export const Banner = styled.img`
 export const Container = styled.div`
   width: 100%;
   margin-top: 106px;
+  @media (max-width: 875px) {
+    margin-top: 96px;
+  }
+  @media (max-width: 860px) {
+    margin-top: 50px;
+  }
 `;
 
 export const BtnGhost = styled.button`
@@ -27,12 +33,19 @@ export const BtnGhost = styled.button`
   background: 0;
   font-size: 3.5rem;
   transition: all 0.3s;
+  margin-right: 40px;
   cursor: pointer;
   &:hover {
     filter: brightness(1.075);
   }
   &:active {
     transform: scale(0.98);
+  }
+  @media (max-width: 875px) {
+    margin-right: 0px;
+  }
+  @media (max-width: 395px) {
+    display: none;
   }
 `;
 
@@ -52,6 +65,9 @@ export const BtnLogin = styled.button`
   }
   &:active {
     transform: scale(0.98);
+  }
+  @media (max-width: 690px) {
+    display: none;
   }
 `;
 
@@ -98,6 +114,17 @@ export const Content = styled.div`
   width: 100%;
   padding-left: 80px;
   padding-right: 80px;
+  @media (max-width: 660px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @media (max-width: 400px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @media (max-width: 380px) {
+    overflow: hidden;
+  }
 `;
 
 export const CardAvatar = styled.div`
@@ -162,6 +189,6 @@ export const Jumbotron = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #eee;
-  margin-top: -2px;
+  background-color: ${general.colors.gray};
+  margin-top: -3px;
 `;

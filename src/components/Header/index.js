@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 import {
   CenterContainer,
@@ -8,18 +8,31 @@ import {
   BtnLogin,
 } from "../../styles/style";
 import {
+  Menu,
+  MenuContainer,
+  MenuItem,
+  MenuItems,
+  SubMenu,
+  SubMenuItemsContainer,
+  SubMenuLink,
+  SubMenuTitle,
+  MenuBarButtom,
+} from "./style";
+import {
   AiOutlineFacebook,
   AiOutlineInstagram,
   AiOutlineTwitter,
   AiOutlineLogin,
   AiOutlineShopping,
 } from "react-icons/ai";
+import { FaBars } from "react-icons/fa";
 import general from "../../configs/general";
 
 import icone from "../../assets/icon-gold.svg";
 import logo from "../../assets/name-slug.svg";
 
 export default function Header() {
+  const [open, setOpen] = useState(true);
   return (
     <header className="header-app">
       <CenterContainer>
@@ -35,7 +48,7 @@ export default function Header() {
                 Entre ou Cadastre-se
               </BtnLogin>
 
-              <BtnGhost style={{ marginRight: 40 }}>
+              <BtnGhost>
                 <LabelButton>1</LabelButton>
                 <AiOutlineShopping color={general.colors.gold} />
               </BtnGhost>
@@ -49,45 +62,175 @@ export default function Header() {
               <a href="/" className="social-media-header">
                 <AiOutlineTwitter color={general.colors.dark} />
               </a>
+              <MenuBarButtom onClick={() => setOpen(!open)}>
+                <FaBars fontSize={27} />
+              </MenuBarButtom>
             </div>
           </div>
-          <nav id="menu-app" className="menu-app">
-            <ul>
-              <li>
-                <span>NOVIDADES</span>
-              </li>
-              <li>
-                <span>FEMENINO</span>
-              </li>
-              <li>
-                <span>MASCULINO</span>
-              </li>
-              <li>
-                <span>INFANTIL</span>
-              </li>
-              <li>
-                <span>BELEZA</span>
-              </li>
-              <li>
-                <span>BOLSAS E ACESSÓRIOS</span>
-              </li>
-              <li>
-                <span>CALÇADOS</span>
-              </li>
-              <li>
-                <span>RELÓGIOS</span>
-              </li>
-              <li>
-                <span>ESPORTIVO</span>
-              </li>
-              <li>
-                <span>MODA ÍNTIMA</span>
-              </li>
-              <li>
-                <span>OFERTAS</span>
-              </li>
-            </ul>
-          </nav>
+          <Menu active={open}>
+            <MenuContainer>
+              <MenuItems>
+                <MenuItem>
+                  NOVIDADES
+                  <SubMenu>
+                    <SubMenuItemsContainer>
+                      <SubMenuTitle>CALÇADOS</SubMenuTitle>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                    </SubMenuItemsContainer>
+                    <SubMenuItemsContainer>
+                      <SubMenuTitle>CALÇADOS</SubMenuTitle>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                    </SubMenuItemsContainer>
+                    <SubMenuItemsContainer>
+                      <SubMenuTitle>CALÇADOS</SubMenuTitle>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                    </SubMenuItemsContainer>
+                    <SubMenuItemsContainer>
+                      <SubMenuTitle>CALÇADOS</SubMenuTitle>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                    </SubMenuItemsContainer>
+                  </SubMenu>
+                </MenuItem>
+              </MenuItems>
+              <MenuItems>
+                <MenuItem>
+                  FEMININO
+                  <SubMenu>
+                    <SubMenuItemsContainer>
+                      <SubMenuTitle>CALÇADOS</SubMenuTitle>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                    </SubMenuItemsContainer>
+                    <SubMenuItemsContainer>
+                      <SubMenuTitle>CALÇADOS</SubMenuTitle>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                    </SubMenuItemsContainer>
+                    <SubMenuItemsContainer>
+                      <SubMenuTitle>CALÇADOS</SubMenuTitle>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                    </SubMenuItemsContainer>
+                    <SubMenuItemsContainer>
+                      <SubMenuTitle>CALÇADOS</SubMenuTitle>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                    </SubMenuItemsContainer>
+                  </SubMenu>
+                </MenuItem>
+              </MenuItems>
+              <MenuItems>
+                <MenuItem>MASCULINO</MenuItem>
+              </MenuItems>
+              <MenuItems>
+                <MenuItem>INFANTIL</MenuItem>
+              </MenuItems>
+              <MenuItems>
+                <MenuItem>BELEZA</MenuItem>
+              </MenuItems>
+
+              <MenuItems>
+                <MenuItem>CALÇADOS</MenuItem>
+              </MenuItems>
+              <MenuItems>
+                <MenuItem>RELÓGIOS</MenuItem>
+              </MenuItems>
+              <MenuItems>
+                <MenuItem>ESPORTIVO</MenuItem>
+              </MenuItems>
+              <MenuItems>
+                <MenuItem>
+                  MODA ÍNTIMA
+                  <SubMenu>
+                    <SubMenuItemsContainer>
+                      <SubMenuTitle>CALÇADOS</SubMenuTitle>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                    </SubMenuItemsContainer>
+                    <SubMenuItemsContainer>
+                      <SubMenuTitle>CALÇADOS</SubMenuTitle>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                    </SubMenuItemsContainer>
+                    <SubMenuItemsContainer>
+                      <SubMenuTitle>CALÇADOS</SubMenuTitle>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                    </SubMenuItemsContainer>
+                    <SubMenuItemsContainer>
+                      <SubMenuTitle>CALÇADOS</SubMenuTitle>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
+                    </SubMenuItemsContainer>
+                  </SubMenu>
+                </MenuItem>
+              </MenuItems>
+            </MenuContainer>
+          </Menu>
         </FixedLayout>
       </CenterContainer>
     </header>

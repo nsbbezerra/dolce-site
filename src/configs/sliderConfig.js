@@ -1,34 +1,27 @@
 const sliderConfig = {
   products: {
+    390: {
+      slidesPerPage: 1,
+    },
+    650: {
+      slidesPerPage: 2,
+    },
+    820: {
+      slidesPerPage: 3,
+    },
+    1110: {
+      slidesPerPage: 4,
+    },
+  },
+  cards: {
     780: {
       slidesPerPage: 1,
     },
-    1110: {
+    1040: {
       slidesPerPage: 2,
     },
-    1290: {
+    1310: {
       slidesPerPage: 3,
-    },
-  },
-  depoiments: {
-    1290: {
-      slidesPerPage: 1,
-    },
-  },
-  videos: {
-    780: {
-      slidesPerPage: 1,
-    },
-    1110: {
-      slidesPerPage: 2,
-    },
-    1290: {
-      slidesPerPage: 3,
-    },
-  },
-  catalog: {
-    900: {
-      slidesPerPage: 1,
     },
   },
 };

@@ -31,86 +31,70 @@ export default function Index() {
             }
           />
 
-          <Jumbotron>
-            <Content>
-              <TitleJumbotron>Navegue por Departamento</TitleJumbotron>
-              <Carousel
-                slidesPerPage={5}
-                arrows
-                arrowLeft={
-                  <MdKeyboardArrowLeft
-                    color="#333"
-                    size={"5em"}
-                    style={{ cursor: "pointer" }}
-                  />
+          <Content>
+            <TitleJumbotron>Procure pelas Marcas</TitleJumbotron>
+            <Carousel
+              slidesPerPage={5}
+              arrows
+              arrowLeft={
+                <MdKeyboardArrowLeft
+                  color="#333"
+                  size={"5em"}
+                  style={{ cursor: "pointer" }}
+                />
+              }
+              arrowLeftDisabled={
+                <MdKeyboardArrowLeft
+                  color="#ddd"
+                  size={"5em"}
+                  style={{ cursor: "not-allowed" }}
+                />
+              }
+              arrowRight={
+                <MdKeyboardArrowRight
+                  color="#333"
+                  size={"5em"}
+                  style={{ cursor: "pointer" }}
+                />
+              }
+              arrowRightDisabled={
+                <MdKeyboardArrowRight
+                  color="#ddd"
+                  size={"5em"}
+                  style={{ cursor: "not-allowed" }}
+                />
+              }
+              addArrowClickHandler
+              breakpoints={breakpoints.products}
+            >
+              <CardMark
+                image={
+                  "https://santalolla.vteximg.com.br/arquivos/logo.png?v=637191252540470000"
                 }
-                arrowLeftDisabled={
-                  <MdKeyboardArrowLeft
-                    color="#ddd"
-                    size={"5em"}
-                    style={{ cursor: "not-allowed" }}
-                  />
+              />
+              <CardMark
+                image={
+                  "https://static.vecteezy.com/system/resources/previews/000/610/039/non_2x/vector-shoes-woman-logo-design-concept-template.jpg"
                 }
-                arrowRight={
-                  <MdKeyboardArrowRight
-                    color="#333"
-                    size={"5em"}
-                    style={{ cursor: "pointer" }}
-                  />
+              />
+              <CardMark
+                image={
+                  "https://image.freepik.com/vetores-gratis/logotipo-de-sapatos-urbanos_1051-1632.jpg"
                 }
-                arrowRightDisabled={
-                  <MdKeyboardArrowRight
-                    color="#ddd"
-                    size={"5em"}
-                    style={{ cursor: "not-allowed" }}
-                  />
+              />
+              <CardMark
+                image={
+                  "https://seeklogo.com/images/C/Converse_All_Star-logo-C1F948F2D8-seeklogo.com.png"
                 }
-                addArrowClickHandler
-                breakpoints={breakpoints.products}
-              >
-                <CardAvatar>
-                  <AvatarImg
-                    image={
-                      "https://static.dafiti.com.br/p/Via-Costeira-Store-Kit-5-Blusas-B%C3%A1sicas-Via-Costeira-em-Algod%C3%A3o-%C3%9Anica-8090-3439025-1-zoom.jpg"
-                    }
-                  />
-                  <CardAvatarDescritpion>Moda Feminina</CardAvatarDescritpion>
-                </CardAvatar>
-                <CardAvatar>
-                  <AvatarImg
-                    image={
-                      "https://static.dafiti.com.br/p/Via-Costeira-Store-Kit-5-Blusas-B%C3%A1sicas-Via-Costeira-em-Algod%C3%A3o-%C3%9Anica-8090-3439025-1-zoom.jpg"
-                    }
-                  />
-                  <CardAvatarDescritpion>Moda Feminina</CardAvatarDescritpion>
-                </CardAvatar>
-                <CardAvatar>
-                  <AvatarImg
-                    image={
-                      "https://static.dafiti.com.br/p/Via-Costeira-Store-Kit-5-Blusas-B%C3%A1sicas-Via-Costeira-em-Algod%C3%A3o-%C3%9Anica-8090-3439025-1-zoom.jpg"
-                    }
-                  />
-                  <CardAvatarDescritpion>Moda Feminina</CardAvatarDescritpion>
-                </CardAvatar>
-                <CardAvatar>
-                  <AvatarImg
-                    image={
-                      "https://static.dafiti.com.br/p/Via-Costeira-Store-Kit-5-Blusas-B%C3%A1sicas-Via-Costeira-em-Algod%C3%A3o-%C3%9Anica-8090-3439025-1-zoom.jpg"
-                    }
-                  />
-                  <CardAvatarDescritpion>Moda Feminina</CardAvatarDescritpion>
-                </CardAvatar>
-                <CardAvatar>
-                  <AvatarImg
-                    image={
-                      "https://static.dafiti.com.br/p/Via-Costeira-Store-Kit-5-Blusas-B%C3%A1sicas-Via-Costeira-em-Algod%C3%A3o-%C3%9Anica-8090-3439025-1-zoom.jpg"
-                    }
-                  />
-                  <CardAvatarDescritpion>Moda Feminina</CardAvatarDescritpion>
-                </CardAvatar>
-              </Carousel>
-            </Content>
-          </Jumbotron>
+              />
+              <CardMark
+                image={
+                  "https://santalolla.vteximg.com.br/arquivos/logo.png?v=637191252540470000"
+                }
+              />
+            </Carousel>
+          </Content>
+
           <Content>
             <Title>Nós Recomendamos a Você</Title>
             <Grid min={250} max={250} gap={30}>
@@ -223,7 +207,7 @@ export default function Index() {
                 />
               }
               addArrowClickHandler
-              breakpoints={breakpoints.products}
+              breakpoints={breakpoints.cards}
             >
               <Card
                 title="Camiseta Femenina Santa Lolla"
@@ -334,7 +318,7 @@ export default function Index() {
                 />
               }
               addArrowClickHandler
-              breakpoints={breakpoints.products}
+              breakpoints={breakpoints.cards}
             >
               <Card
                 title="Camiseta Femenina Santa Lolla"
@@ -407,70 +391,6 @@ export default function Index() {
                 discountPrice={250}
                 price={250}
                 payOpt={"6x de R$35,00"}
-              />
-            </Carousel>
-          </Content>
-
-          <Content>
-            <TitleJumbotron>Procure pelas Marcas</TitleJumbotron>
-            <Carousel
-              slidesPerPage={5}
-              arrows
-              arrowLeft={
-                <MdKeyboardArrowLeft
-                  color="#333"
-                  size={"5em"}
-                  style={{ cursor: "pointer" }}
-                />
-              }
-              arrowLeftDisabled={
-                <MdKeyboardArrowLeft
-                  color="#ddd"
-                  size={"5em"}
-                  style={{ cursor: "not-allowed" }}
-                />
-              }
-              arrowRight={
-                <MdKeyboardArrowRight
-                  color="#333"
-                  size={"5em"}
-                  style={{ cursor: "pointer" }}
-                />
-              }
-              arrowRightDisabled={
-                <MdKeyboardArrowRight
-                  color="#ddd"
-                  size={"5em"}
-                  style={{ cursor: "not-allowed" }}
-                />
-              }
-              addArrowClickHandler
-              breakpoints={breakpoints.products}
-            >
-              <CardMark
-                image={
-                  "https://santalolla.vteximg.com.br/arquivos/logo.png?v=637191252540470000"
-                }
-              />
-              <CardMark
-                image={
-                  "https://static.vecteezy.com/system/resources/previews/000/610/039/non_2x/vector-shoes-woman-logo-design-concept-template.jpg"
-                }
-              />
-              <CardMark
-                image={
-                  "https://image.freepik.com/vetores-gratis/logotipo-de-sapatos-urbanos_1051-1632.jpg"
-                }
-              />
-              <CardMark
-                image={
-                  "https://seeklogo.com/images/C/Converse_All_Star-logo-C1F948F2D8-seeklogo.com.png"
-                }
-              />
-              <CardMark
-                image={
-                  "https://santalolla.vteximg.com.br/arquivos/logo.png?v=637191252540470000"
-                }
               />
             </Carousel>
           </Content>
