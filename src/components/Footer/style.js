@@ -18,7 +18,7 @@ export const FooterFixed = styled.div`
 export const GridInfo = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 380px));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
   grid-gap: 15px;
   justify-content: center;
   justify-items: center;
@@ -33,7 +33,7 @@ export const ContainterInfo = styled.div`
   align-items: center;
   font-family: "Saira Condensed", sans-serif;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 500;
   padding: 15px;
   color: ${general.colors.dark};

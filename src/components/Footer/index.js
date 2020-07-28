@@ -27,11 +27,11 @@ export default function FooterApp() {
         <FooterFixed>
           <GridInfo>
             <ContainterInfo>
-              <FaShippingFast fontSize={40} style={{ marginRight: 15 }} />
+              <FaShippingFast fontSize={30} style={{ marginRight: 15 }} />
               ENTREGAMOS PARA TODO O BRASIL
             </ContainterInfo>
             <ContainterInfo>
-              <FaRegCreditCard fontSize={40} style={{ marginRight: 15 }} />
+              <FaRegCreditCard fontSize={30} style={{ marginRight: 15 }} />
               PARCELE EM ATÉ 6X NO CARTÃO
             </ContainterInfo>
           </GridInfo>

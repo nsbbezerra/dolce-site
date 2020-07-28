@@ -14,13 +14,13 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #f4989c;
+  background: #ccc;
   border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #fd7d83;
+  background: #bbb;
 }
 
 body {

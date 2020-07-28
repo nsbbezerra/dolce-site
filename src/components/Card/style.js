@@ -37,11 +37,12 @@ export const ButtonCard = styled.div`
   font-weight: 500;
   font-family: "Saira Condensed", sans-serif;
   font-size: 1.2rem;
+  border-radius: ${colors.cssDefault.radius}px;
   transition: all 0.3s;
   user-select: none;
   cursor: pointer;
   &:hover {
-    opacity: 0.8;
+    background: ${(props) => props.hover || ""};
   }
   &:active {
     transform: scale(0.98);
@@ -63,9 +64,10 @@ export const ButtonCardFull = styled.div`
   font-size: 1.3rem;
   transition: all 0.3s;
   user-select: none;
+  border-radius: ${colors.cssDefault.radius}px;
   cursor: pointer;
   &:hover {
-    opacity: 0.8;
+    background: ${(props) => props.hover || ""};
   }
   &:active {
     transform: scale(0.98);
@@ -77,6 +79,8 @@ export const Card = styled.div`
   height: 365px;
   border: 1px solid #eee;
   transition: all 0.3s;
+  border-radius: ${colors.cssDefault.radius}px;
+  overflow: hidden;
   &:hover {
     ${CardAction} {
       transition: all 0.3s;

@@ -1,16 +1,12 @@
 import React from "react";
 import { Grid } from "./style";
 
-export default function GridApp({
-  children,
-  min = 0,
-  max = 0,
-  gap = 0,
-  ...rest
-}) {
+const GridApp = React.forwardRef((props, ref, ...rest) => {
   return (
-    <Grid min={min} max={max} gap={gap} {...rest}>
-      {children}
+    <Grid min={props.min} max={props.max} gap={props.gap} {...rest} ref={ref}>
+      {props.children}
     </Grid>
   );
-}
+});
+
+export default GridApp;

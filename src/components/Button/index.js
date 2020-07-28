@@ -2,14 +2,7 @@ import React from "react";
 import { Button, Label, Content } from "./style";
 import general from "../../configs/general";
 
-export default function ButtonComponent({
-  children,
-  small = false,
-  outlined = false,
-  theme = "gold",
-  full = false,
-  ...rest
-}) {
+const ButtonComponent = React.forwardRef((props, ref, ...rest) => {
   const dark = { background: general.colors.dark, color: general.colors.dark };
   const gold = { background: general.colors.gold, color: general.colors.dark };
   const light = {
@@ -27,7 +20,7 @@ export default function ButtonComponent({
   const red = { background: general.colors.error, color: general.colors.dark };
 
   function handleColors() {
-    switch (theme) {
+    switch (props.theme) {
       case "gold":
         return gold;
       case "dark":
@@ -49,18 +42,21 @@ export default function ButtonComponent({
     <Button
       background={handleColors().background}
       color={handleColors().color}
-      outlined={outlined}
-      full={full}
+      outlined={props.outlined}
+      full={props.full}
       {...rest}
+      ref={ref}
     >
       <Label
         background={handleColors().background}
         small={small}
         outlined={outlined}
       >
-        {children ? children[0] : ""}
+        {props.children ? props.children[0] : ""}
       </Label>
-      <Content>{children ? children[1] : ""}</Content>
+      <Content>{props.children ? props.children[1] : ""}</Content>
     </Button>
   );
-}
+});
+
+export default ButtonComponent;

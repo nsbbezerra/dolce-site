@@ -13,10 +13,17 @@ import {
   MenuItem,
   MenuItems,
   SubMenu,
-  SubMenuItemsContainer,
+  MenuItemExtra,
   SubMenuLink,
   SubMenuTitle,
   MenuBarButtom,
+  MenuItemMenu,
+  CarrouselContainer,
+  CarrouselDescritpion,
+  AvatarImg,
+  ContainerOfCarrousel,
+  ContainerContentMenu,
+  ContainerInfoMenu,
 } from "./style";
 import {
   AiOutlineFacebook,
@@ -28,8 +35,11 @@ import {
 import { FaBars } from "react-icons/fa";
 import general from "../../configs/general";
 import { useHistory } from "react-router-dom";
+import Carousel from "@brainhubeu/react-carousel";
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+import breakpoints from "../../configs/sliderConfig";
 
-import icone from "../../assets/icon-gold.svg";
+import icone from "../../assets/icon-black.svg";
 import logo from "../../assets/name-slug.svg";
 
 export default function Header() {
@@ -65,7 +75,7 @@ export default function Header() {
 
               <BtnGhost>
                 <LabelButton>1</LabelButton>
-                <AiOutlineShopping color={general.colors.gold} />
+                <AiOutlineShopping color={general.colors.light} />
               </BtnGhost>
 
               <a href="/" className="social-media-header">
@@ -85,54 +95,182 @@ export default function Header() {
           <Menu active={open}>
             <MenuContainer>
               <MenuItems>
+                <MenuItemMenu>
+                  <FaBars style={{ marginRight: 10 }} />
+                  MENU
+                  <SubMenu>
+                    <ContainerOfCarrousel>
+                      <Carousel
+                        slidesPerPage={7}
+                        arrows
+                        arrowLeft={
+                          <MdKeyboardArrowLeft
+                            color="#333"
+                            size={"3rem"}
+                            style={{ cursor: "pointer" }}
+                          />
+                        }
+                        arrowLeftDisabled={
+                          <MdKeyboardArrowLeft
+                            color="#ddd"
+                            size={"3rem"}
+                            style={{ cursor: "not-allowed" }}
+                          />
+                        }
+                        arrowRight={
+                          <MdKeyboardArrowRight
+                            color="#333"
+                            size={"3rem"}
+                            style={{ cursor: "pointer" }}
+                          />
+                        }
+                        arrowRightDisabled={
+                          <MdKeyboardArrowRight
+                            color="#ddd"
+                            size={"3rem"}
+                            style={{ cursor: "not-allowed" }}
+                          />
+                        }
+                        addArrowClickHandler
+                        breakpoints={breakpoints.products}
+                        style={{ background: "red" }}
+                      >
+                        <CarrouselContainer>
+                          <AvatarImg
+                            image={
+                              "https://4.bp.blogspot.com/-gEldIT9Lj40/WQFK9_z92dI/AAAAAAAABpU/xl_s-Z-Raj0SmlC-jjAI7Jf9YvYYYLiuQCLcB/s1600/blusa%2Bbranca%2Bmoda%2Bmeio%2Bque%2Btipo%2Bassim.png"
+                            }
+                          />
+                          <CarrouselDescritpion>
+                            MODA MASCULINA
+                          </CarrouselDescritpion>
+                        </CarrouselContainer>
+                        <CarrouselContainer>
+                          <AvatarImg
+                            image={
+                              "https://4.bp.blogspot.com/-gEldIT9Lj40/WQFK9_z92dI/AAAAAAAABpU/xl_s-Z-Raj0SmlC-jjAI7Jf9YvYYYLiuQCLcB/s1600/blusa%2Bbranca%2Bmoda%2Bmeio%2Bque%2Btipo%2Bassim.png"
+                            }
+                          />
+                          <CarrouselDescritpion>
+                            MODA MASCULINA
+                          </CarrouselDescritpion>
+                        </CarrouselContainer>
+                        <CarrouselContainer>
+                          <AvatarImg
+                            image={
+                              "https://4.bp.blogspot.com/-gEldIT9Lj40/WQFK9_z92dI/AAAAAAAABpU/xl_s-Z-Raj0SmlC-jjAI7Jf9YvYYYLiuQCLcB/s1600/blusa%2Bbranca%2Bmoda%2Bmeio%2Bque%2Btipo%2Bassim.png"
+                            }
+                          />
+                          <CarrouselDescritpion>
+                            MODA MASCULINA
+                          </CarrouselDescritpion>
+                        </CarrouselContainer>
+                        <CarrouselContainer>
+                          <AvatarImg
+                            image={
+                              "https://4.bp.blogspot.com/-gEldIT9Lj40/WQFK9_z92dI/AAAAAAAABpU/xl_s-Z-Raj0SmlC-jjAI7Jf9YvYYYLiuQCLcB/s1600/blusa%2Bbranca%2Bmoda%2Bmeio%2Bque%2Btipo%2Bassim.png"
+                            }
+                          />
+                          <CarrouselDescritpion>
+                            MODA MASCULINA
+                          </CarrouselDescritpion>
+                        </CarrouselContainer>
+                        <CarrouselContainer>
+                          <AvatarImg
+                            image={
+                              "https://4.bp.blogspot.com/-gEldIT9Lj40/WQFK9_z92dI/AAAAAAAABpU/xl_s-Z-Raj0SmlC-jjAI7Jf9YvYYYLiuQCLcB/s1600/blusa%2Bbranca%2Bmoda%2Bmeio%2Bque%2Btipo%2Bassim.png"
+                            }
+                          />
+                          <CarrouselDescritpion>
+                            MODA MASCULINA
+                          </CarrouselDescritpion>
+                        </CarrouselContainer>
+                        <CarrouselContainer>
+                          <AvatarImg
+                            image={
+                              "https://4.bp.blogspot.com/-gEldIT9Lj40/WQFK9_z92dI/AAAAAAAABpU/xl_s-Z-Raj0SmlC-jjAI7Jf9YvYYYLiuQCLcB/s1600/blusa%2Bbranca%2Bmoda%2Bmeio%2Bque%2Btipo%2Bassim.png"
+                            }
+                          />
+                          <CarrouselDescritpion>
+                            MODA MASCULINA
+                          </CarrouselDescritpion>
+                        </CarrouselContainer>
+                        <CarrouselContainer>
+                          <AvatarImg
+                            image={
+                              "https://4.bp.blogspot.com/-gEldIT9Lj40/WQFK9_z92dI/AAAAAAAABpU/xl_s-Z-Raj0SmlC-jjAI7Jf9YvYYYLiuQCLcB/s1600/blusa%2Bbranca%2Bmoda%2Bmeio%2Bque%2Btipo%2Bassim.png"
+                            }
+                          />
+                          <CarrouselDescritpion>
+                            MODA MASCULINA
+                          </CarrouselDescritpion>
+                        </CarrouselContainer>
+                        <CarrouselContainer>
+                          <AvatarImg
+                            image={
+                              "https://4.bp.blogspot.com/-gEldIT9Lj40/WQFK9_z92dI/AAAAAAAABpU/xl_s-Z-Raj0SmlC-jjAI7Jf9YvYYYLiuQCLcB/s1600/blusa%2Bbranca%2Bmoda%2Bmeio%2Bque%2Btipo%2Bassim.png"
+                            }
+                          />
+                          <CarrouselDescritpion>
+                            MODA MASCULINA
+                          </CarrouselDescritpion>
+                        </CarrouselContainer>
+                      </Carousel>
+                    </ContainerOfCarrousel>
+                    <ContainerContentMenu>
+                      <ContainerInfoMenu>
+                        <SubMenuTitle>CALÇADOS</SubMenuTitle>
+                        <SubMenuLink>Botas</SubMenuLink>
+                        <SubMenuLink>Chinelos</SubMenuLink>
+                        <SubMenuLink>Linha Conforto</SubMenuLink>
+                        <SubMenuLink>Sandálias</SubMenuLink>
+                        <SubMenuLink>Scarpin</SubMenuLink>
+                        <SubMenuLink>Peep Tools</SubMenuLink>
+                        <SubMenuLink>Rasteiras</SubMenuLink>
+                        <SubMenuLink>Sapatilhas</SubMenuLink>
+                      </ContainerInfoMenu>
+                      <ContainerInfoMenu>
+                        <SubMenuTitle>CALÇADOS</SubMenuTitle>
+                        <SubMenuLink>Botas</SubMenuLink>
+                        <SubMenuLink>Chinelos</SubMenuLink>
+                        <SubMenuLink>Linha Conforto</SubMenuLink>
+                        <SubMenuLink>Sandálias</SubMenuLink>
+                        <SubMenuLink>Scarpin</SubMenuLink>
+                        <SubMenuLink>Peep Tools</SubMenuLink>
+                        <SubMenuLink>Rasteiras</SubMenuLink>
+                        <SubMenuLink>Sapatilhas</SubMenuLink>
+                      </ContainerInfoMenu>
+                      <ContainerInfoMenu>
+                        <SubMenuTitle>CALÇADOS</SubMenuTitle>
+                        <SubMenuLink>Botas</SubMenuLink>
+                        <SubMenuLink>Chinelos</SubMenuLink>
+                        <SubMenuLink>Linha Conforto</SubMenuLink>
+                        <SubMenuLink>Sandálias</SubMenuLink>
+                        <SubMenuLink>Scarpin</SubMenuLink>
+                        <SubMenuLink>Peep Tools</SubMenuLink>
+                        <SubMenuLink>Rasteiras</SubMenuLink>
+                        <SubMenuLink>Sapatilhas</SubMenuLink>
+                      </ContainerInfoMenu>
+                      <ContainerInfoMenu>
+                        <SubMenuTitle>CALÇADOS</SubMenuTitle>
+                        <SubMenuLink>Botas</SubMenuLink>
+                        <SubMenuLink>Chinelos</SubMenuLink>
+                        <SubMenuLink>Linha Conforto</SubMenuLink>
+                        <SubMenuLink>Sandálias</SubMenuLink>
+                        <SubMenuLink>Scarpin</SubMenuLink>
+                        <SubMenuLink>Peep Tools</SubMenuLink>
+                        <SubMenuLink>Rasteiras</SubMenuLink>
+                        <SubMenuLink>Sapatilhas</SubMenuLink>
+                      </ContainerInfoMenu>
+                    </ContainerContentMenu>
+                  </SubMenu>
+                </MenuItemMenu>
+              </MenuItems>
+              <MenuItems>
                 <MenuItem>NOVIDADES</MenuItem>
               </MenuItems>
               <MenuItems>
-                <MenuItem>
-                  FEMININO
-                  <SubMenu>
-                    <SubMenuItemsContainer>
-                      <SubMenuTitle>CALÇADOS</SubMenuTitle>
-                      <SubMenuLink to="/produtos">SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                    </SubMenuItemsContainer>
-                    <SubMenuItemsContainer>
-                      <SubMenuTitle>CALÇADOS</SubMenuTitle>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                    </SubMenuItemsContainer>
-                    <SubMenuItemsContainer>
-                      <SubMenuTitle>CALÇADOS</SubMenuTitle>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                    </SubMenuItemsContainer>
-                    <SubMenuItemsContainer>
-                      <SubMenuTitle>CALÇADOS</SubMenuTitle>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                    </SubMenuItemsContainer>
-                  </SubMenu>
-                </MenuItem>
+                <MenuItem>FEMININO</MenuItem>
               </MenuItems>
               <MenuItems>
                 <MenuItem>MASCULINO</MenuItem>
@@ -143,7 +281,6 @@ export default function Header() {
               <MenuItems>
                 <MenuItem>BELEZA</MenuItem>
               </MenuItems>
-
               <MenuItems>
                 <MenuItem>CALÇADOS</MenuItem>
               </MenuItems>
@@ -154,52 +291,10 @@ export default function Header() {
                 <MenuItem>ESPORTIVO</MenuItem>
               </MenuItems>
               <MenuItems>
-                <MenuItem>
-                  MODA ÍNTIMA
-                  <SubMenu>
-                    <SubMenuItemsContainer>
-                      <SubMenuTitle>CALÇADOS</SubMenuTitle>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                    </SubMenuItemsContainer>
-                    <SubMenuItemsContainer>
-                      <SubMenuTitle>CALÇADOS</SubMenuTitle>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                    </SubMenuItemsContainer>
-                    <SubMenuItemsContainer>
-                      <SubMenuTitle>CALÇADOS</SubMenuTitle>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                    </SubMenuItemsContainer>
-                    <SubMenuItemsContainer>
-                      <SubMenuTitle>CALÇADOS</SubMenuTitle>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                      <SubMenuLink>SANDÁLIAS</SubMenuLink>
-                    </SubMenuItemsContainer>
-                  </SubMenu>
-                </MenuItem>
+                <MenuItem>MODA ÍNTIMA</MenuItem>
               </MenuItems>
+              <MenuItemExtra>ENTRE OU CADASTRE-SE</MenuItemExtra>
+              <MenuItemExtra>MEUS DADOS</MenuItemExtra>
             </MenuContainer>
           </Menu>
         </FixedLayout>

@@ -5,10 +5,10 @@ export const CenterContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
 `;
 
 export const FixedLayout = styled.div`
+  display: block;
   width: 100%;
   max-width: 1380px;
 `;
@@ -23,7 +23,7 @@ export const Container = styled.div`
   @media (max-width: 875px) {
     margin-top: 96px;
   }
-  @media (max-width: 860px) {
+  @media (max-width: 950px) {
     margin-top: 50px;
   }
 `;
@@ -59,6 +59,7 @@ export const BtnLogin = styled.button`
   font-weight: 500;
   transition: all 0.3s;
   font-family: "Roboto", sans-serif;
+  color: ${general.colors.dark};
   cursor: pointer;
   &:hover {
     filter: brightness(1.075);
@@ -81,7 +82,7 @@ export const LabelButton = styled.span`
   background-color: ${general.colors.dark};
   color: ${general.colors.light};
   border-radius: 100%;
-  font-size: 8.5px;
+  font-size: 9px;
   padding: 2px;
   position: absolute;
   margin-left: -8px;
@@ -122,8 +123,9 @@ export const Content = styled.div`
     padding-left: 15px;
     padding-right: 15px;
   }
-  @media (max-width: 380px) {
-    overflow: hidden;
+  @media (max-width: 360px) {
+    padding-left: 5px;
+    padding-right: 5px;
   }
 `;
 

@@ -35,8 +35,8 @@ viewBox="0 0 12000.58 2220.32"
   <style type="text/css">
    <![CDATA[
     @font-face { font-family:"Calibri";font-variant:normal;font-weight:normal;src:url("#FontID0") format(svg)}
-    .fil1 {fill:#4B4B4D}
-    .fil0 {fill:#373435;fill-rule:nonzero}
+    .fil1 {fill:#0a100d}
+    .fil0 {fill:#0a100d;fill-rule:nonzero}
     .fnt0 {font-weight:normal;font-size:586.37px;font-family:'Calibri'}
    ]]>
   </style>

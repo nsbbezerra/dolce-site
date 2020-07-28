@@ -7,6 +7,8 @@ const configs = {
     negative: "#f4989c",
     gold: "#d4af37",
     gray: "#eee",
+    goldVariation: "#eec94e",
+    darkVariation: "#1d1f1e",
   },
   cssDefault: {
     radius: 4,
