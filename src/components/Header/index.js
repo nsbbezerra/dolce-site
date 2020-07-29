@@ -32,7 +32,7 @@ import {
   AiOutlineLogin,
   AiOutlineShopping,
 } from "react-icons/ai";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import general from "../../configs/general";
 import { useHistory } from "react-router-dom";
 import Carousel from "@brainhubeu/react-carousel";
@@ -45,8 +45,13 @@ import logo from "../../assets/name-slug.svg";
 export default function Header() {
   const [open, setOpen] = useState(true);
   const history = useHistory();
+
   function goToHome() {
     history.push("/");
+  }
+
+  function goToProducts(rt) {
+    history.push(`/${rt}`);
   }
   return (
     <header className="header-app">
@@ -88,7 +93,7 @@ export default function Header() {
                 <AiOutlineTwitter color={general.colors.dark} />
               </a>
               <MenuBarButtom onClick={() => setOpen(!open)}>
-                <FaBars fontSize={27} />
+                {!open ? <FaTimes fontSize={27} /> : <FaBars fontSize={27} />}
               </MenuBarButtom>
             </div>
           </div>
@@ -267,7 +272,9 @@ export default function Header() {
                 </MenuItemMenu>
               </MenuItems>
               <MenuItems>
-                <MenuItem>NOVIDADES</MenuItem>
+                <MenuItem onClick={() => goToProducts("produtos")}>
+                  NOVIDADES
+                </MenuItem>
               </MenuItems>
               <MenuItems>
                 <MenuItem>FEMININO</MenuItem>

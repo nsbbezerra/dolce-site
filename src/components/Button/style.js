@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Button = styled.button`
-  width: ${(props) => (props.full === true ? "100%" : "")};
+  width: ${(props) => (props.full === true ? "100%" : "max-content")};
   background: ${(props) =>
     props.outlined === true ? "transparent" : props.background};
   color: ${(props) => props.color || "white"};
@@ -17,8 +17,9 @@ export const Button = styled.button`
   border-bottom-left-radius: 5px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.3s;
   &:hover {
@@ -36,8 +37,8 @@ export const Label = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 20px;
-  width: ${(props) => (props.small === true ? "30px" : "40px")};
-  height: ${(props) => (props.small === true ? "30px" : "40px")};
+  width: ${(props) => (props.small === true ? "40px" : "50px")};
+  height: ${(props) => (props.small === true ? "40px" : "50px")};
   background: ${(props) =>
     props.outlined === true ? "transparent" : props.background};
   filter: brightness(0.97);
@@ -47,8 +48,9 @@ export const Label = styled.div`
 
 export const Content = styled.div`
   width: 100%;
+  position: relative;
   text-align: center;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-weight: 600;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: 500;
 `;

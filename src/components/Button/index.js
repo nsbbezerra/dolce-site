@@ -19,8 +19,16 @@ const ButtonComponent = React.forwardRef((props, ref, ...rest) => {
   };
   const red = { background: general.colors.error, color: general.colors.dark };
 
+  const {
+    children,
+    theme = "gold",
+    outlined = false,
+    full = false,
+    small = false,
+  } = props;
+
   function handleColors() {
-    switch (props.theme) {
+    switch (theme) {
       case "gold":
         return gold;
       case "dark":
@@ -42,19 +50,21 @@ const ButtonComponent = React.forwardRef((props, ref, ...rest) => {
     <Button
       background={handleColors().background}
       color={handleColors().color}
-      outlined={props.outlined}
-      full={props.full}
+      outlined={outlined}
+      full={full}
       {...rest}
       ref={ref}
     >
-      <Label
-        background={handleColors().background}
-        small={small}
-        outlined={outlined}
-      >
-        {props.children ? props.children[0] : ""}
-      </Label>
-      <Content>{props.children ? props.children[1] : ""}</Content>
+      {typeof children !== "string" && (
+        <Label
+          background={handleColors().background}
+          small={small}
+          outlined={outlined}
+        >
+          {children ? children[0] : ""}
+        </Label>
+      )}
+      <Content>{typeof children === "string" ? children : children[1]}</Content>
     </Button>
   );
 });

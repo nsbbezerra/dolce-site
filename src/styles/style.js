@@ -19,13 +19,6 @@ export const Banner = styled.img`
 
 export const Container = styled.div`
   width: 100%;
-  margin-top: 106px;
-  @media (max-width: 875px) {
-    margin-top: 96px;
-  }
-  @media (max-width: 950px) {
-    margin-top: 50px;
-  }
 `;
 
 export const BtnGhost = styled.button`

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Container,
   Banner,
@@ -14,10 +14,17 @@ import Grid from "../../components/Grid/index";
 import Card from "../../components/Card/index";
 import Carousel from "@brainhubeu/react-carousel";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+import { useLocation } from "react-router-dom";
 
 import breakpoints from "../../configs/sliderConfig";
 
 export default function Index() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <Container>
       <CenterContainer>
@@ -104,6 +111,7 @@ export default function Index() {
                 discountPrice={250}
                 price={250}
                 payOpt={"6x de R$35,00"}
+                route="/produto"
               />
               <Card
                 title="Camiseta Femenina Santa Lolla"
@@ -113,6 +121,7 @@ export default function Index() {
                 discountPrice={250}
                 price={250}
                 payOpt={"6x de R$35,00"}
+                route="/produto"
               />
               <Card
                 title="Camiseta Femenina Santa Lolla"
@@ -122,6 +131,7 @@ export default function Index() {
                 discountPrice={250}
                 price={250}
                 payOpt={"6x de R$35,00"}
+                route="/produto"
               />
               <Card
                 title="Camiseta Femenina Santa Lolla"

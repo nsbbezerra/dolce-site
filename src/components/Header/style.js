@@ -10,11 +10,11 @@ export const Menu = styled.nav`
   margin-top: 3px;
   padding-top: 10px;
   padding-bottom: 5px;
-  border-top: 1px solid ${general.colors.dark};
+  border-top: 1px solid ${general.colors.goldVariation};
   transition: all 0.3s;
   @media (max-width: 950px) {
     display: flex;
-    margin-left: ${(props) => (props.active === true ? -100 : 0)}%;
+    margin-left: ${(props) => (props.active === true ? -120 : 0)}%;
     flex-direction: column;
     top: 46px;
     justify-content: flex-start;
@@ -308,7 +308,7 @@ export const AvatarImg = styled.div`
   width: 80px;
   height: 80px;
   border-radius: 100%;
-  border: 1.5px solid ${general.colors.gold};
+
   background-image: url(${(props) => props.image});
   background-position: center;
   background-size: cover;
