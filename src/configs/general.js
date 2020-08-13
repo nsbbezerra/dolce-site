@@ -8,7 +8,7 @@ const configs = {
     gold: "#d4af37",
     gray: "#eee",
     goldVariation: "#eec94e",
-    darkVariation: "#1d1f1e",
+    darkVariation: "#333",
   },
   cssDefault: {
     radius: 4,

@@ -9,12 +9,15 @@ import {
   TitleJumbotron,
   CardMark,
   Spaced,
+  VejaMaisContainer,
 } from "../../styles/style";
 import Grid from "../../components/Grid/index";
 import Card from "../../components/Card/index";
 import Carousel from "@brainhubeu/react-carousel";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import { useLocation } from "react-router-dom";
+import { FaSearchPlus } from "react-icons/fa";
+import Buttom from "../../components/Button/index";
 
 import breakpoints from "../../configs/sliderConfig";
 
@@ -179,9 +182,12 @@ export default function Index() {
                 payOpt={"6x de R$35,00"}
               />
             </Grid>
+            <VejaMaisContainer style={{ marginTop: 40 }}>
+              <Buttom full={false} small={true} outlined={true} theme="dark">
+                <FaSearchPlus /> VEJA MAIS PRODUTOS
+              </Buttom>
+            </VejaMaisContainer>
           </Content>
-
-          <Spaced />
 
           <Content>
             <Title>Ofertas Imperdíveis</Title>

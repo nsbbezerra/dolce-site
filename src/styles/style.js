@@ -183,3 +183,10 @@ export const Spaced = styled.div`
   width: 100%;
   height: 60px;
 `;
+
+export const VejaMaisContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;

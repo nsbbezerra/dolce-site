@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Container,
   Content,
   CenterContainer,
   FixedLayout,
   Banner,
+  VejaMaisContainer,
 } from "../../styles/style";
 import { ContainerBreadCrumb, BreadCrumb } from "../Products/style";
 import {
@@ -28,18 +29,28 @@ import {
   GridAvaliation,
   AvaliationVal,
   GridCheckout,
+  ColorInfoContainer,
+  InfoColor,
+  SizeInfoContainer,
+  TextArea,
+  RowQtd,
+  Input,
+  ContainerDescriptionTwo,
+  CommentContainer,
+  DateRef,
 } from "./style";
 import { useLocation } from "react-router-dom";
 import ImageGallery from "react-image-gallery";
 import Buttom from "../../components/Button/index";
 import Carousel from "@brainhubeu/react-carousel";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
-import { FaShoppingCart } from "react-icons/fa";
+import { FaShoppingCart, FaSearchPlus } from "react-icons/fa";
+import { FiSend } from "react-icons/fi";
 import ReactStars from "react-rating-stars-component";
 
 export default function ProductsInfo() {
   const { pathname } = useLocation();
-
+  const [sliderPosition, setSliderPosition] = useState("right");
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
@@ -65,6 +76,19 @@ export default function ProductsInfo() {
     },
   ];
 
+  useEffect(() => {
+    handleWidth();
+  }, []);
+
+  function handleWidth() {
+    let widthWindow = window.innerWidth;
+    if (widthWindow <= 450) {
+      setSliderPosition("bottom");
+    } else {
+      setSliderPosition("right");
+    }
+  }
+
   return (
     <Container>
       <CenterContainer>
@@ -87,7 +111,10 @@ export default function ProductsInfo() {
                 <RefProduct style={{ marginBottom: 15 }}>
                   Ref.: <strong>MSX-0007-006-02</strong>
                 </RefProduct>
-                <ImageGallery items={images} thumbnailPosition="right" />
+                <ImageGallery
+                  items={images}
+                  thumbnailPosition={sliderPosition}
+                />
               </ContainerInfo>
 
               <ContainerInfo>
@@ -139,12 +166,24 @@ export default function ProductsInfo() {
                         }
                         addArrowClickHandler
                       >
-                        <ColorContainer background="red" disable={true} />
-                        <ColorContainer background="black" disable={true} />
-                        <ColorContainer background="blue" />
-                        <ColorContainer background="pink" />
-                        <ColorContainer background="gold" />
-                        <ColorContainer background="red" />
+                        <ColorInfoContainer disable={true} check={false}>
+                          <ColorContainer background="red" />
+                        </ColorInfoContainer>
+                        <ColorInfoContainer disable={false} check={false}>
+                          <ColorContainer background="gray" />
+                        </ColorInfoContainer>
+                        <ColorInfoContainer disable={false} check={true}>
+                          <ColorContainer background="green" />
+                        </ColorInfoContainer>
+                        <ColorInfoContainer disable={false} check={false}>
+                          <ColorContainer background="yellow" />
+                        </ColorInfoContainer>
+                        <ColorInfoContainer disable={false} check={false}>
+                          <ColorContainer background="black" />
+                        </ColorInfoContainer>
+                        <ColorInfoContainer disable={false} check={false}>
+                          <ColorContainer background="white" />
+                        </ColorInfoContainer>
                       </Carousel>
                     </div>
                     <Discount style={{ marginTop: 25 }}>
@@ -186,12 +225,27 @@ export default function ProductsInfo() {
                         }
                         addArrowClickHandler
                       >
-                        <SizeContainer>P</SizeContainer>
-                        <SizeContainer>M</SizeContainer>
-                        <SizeContainer>G</SizeContainer>
-                        <SizeContainer>GG</SizeContainer>
+                        <SizeInfoContainer disable={false} check={false}>
+                          <SizeContainer>P</SizeContainer>
+                          <InfoColor disponible={true}>22</InfoColor>
+                        </SizeInfoContainer>
+                        <SizeInfoContainer disable={true} check={false}>
+                          <SizeContainer>M</SizeContainer>
+                          <InfoColor disponible={true}>22</InfoColor>
+                        </SizeInfoContainer>
+                        <SizeInfoContainer disable={false} check={true}>
+                          <SizeContainer>M</SizeContainer>
+                          <InfoColor disponible={true}>22</InfoColor>
+                        </SizeInfoContainer>
                       </Carousel>
                     </div>
+                    <RowQtd>
+                      QUANTIDADE:
+                      <Input
+                        type="number"
+                        style={{ width: 80, marginLeft: 15 }}
+                      />
+                    </RowQtd>
                   </div>
                   <div>
                     <Buttom full={true}>
@@ -324,15 +378,8 @@ export default function ProductsInfo() {
                 </Discount>
               </GridDescription>
             </ContainerDescription>
-            <ContainerDescription>
+            <ContainerDescriptionTwo>
               <GridAvaliation>
-                <div>
-                  <TitleDesc>Avaliações do Produto</TitleDesc>
-                  <div style={{ display: "flex", alignItems: "center" }}>
-                    <AvaliationVal>92%</AvaliationVal>
-                    <Discount>Recomendaram este produto.</Discount>
-                  </div>
-                </div>
                 <div>
                   <TitleDesc>Avaliações dos Clientes</TitleDesc>
                   <div style={{ display: "flex", alignItems: "center" }}>
@@ -349,8 +396,107 @@ export default function ProductsInfo() {
                     </div>
                   </div>
                 </div>
+                <div>
+                  <TextArea rows={3} placeholder="Insira seu comentário aqui" />
+                  <Buttom full={false} small={true}>
+                    <FiSend /> ENVIAR COMENTÁRIO
+                  </Buttom>
+                </div>
               </GridAvaliation>
-            </ContainerDescription>
+            </ContainerDescriptionTwo>
+            <ContainerDescriptionTwo>
+              <TitleDesc>Comentários</TitleDesc>
+              <CommentContainer>
+                <ReactStars
+                  count={5}
+                  value={4.8}
+                  onChange={() => {}}
+                  size={24}
+                  activeColor="#ffd700"
+                />
+                <Discount>Produto exelente de boa qualidade</Discount>
+                <Discount>
+                  <strong>Josue</strong>
+                  <DateRef>10/10/1010</DateRef>
+                </Discount>
+              </CommentContainer>
+
+              <CommentContainer>
+                <ReactStars
+                  count={5}
+                  value={4.8}
+                  onChange={() => {}}
+                  size={24}
+                  activeColor="#ffd700"
+                />
+                <Discount>Produto exelente de boa qualidade</Discount>
+                <Discount>
+                  <strong>Josue</strong>
+                  <DateRef>10/10/1010</DateRef>
+                </Discount>
+              </CommentContainer>
+              <CommentContainer>
+                <ReactStars
+                  count={5}
+                  value={4.8}
+                  onChange={() => {}}
+                  size={24}
+                  activeColor="#ffd700"
+                />
+                <Discount>Produto exelente de boa qualidade</Discount>
+                <Discount>
+                  <strong>Josue</strong>
+                  <DateRef>10/10/1010</DateRef>
+                </Discount>
+              </CommentContainer>
+              <CommentContainer>
+                <ReactStars
+                  count={5}
+                  value={4.8}
+                  onChange={() => {}}
+                  size={24}
+                  activeColor="#ffd700"
+                />
+                <Discount>Produto exelente de boa qualidade</Discount>
+                <Discount>
+                  <strong>Josue</strong>
+                  <DateRef>10/10/1010</DateRef>
+                </Discount>
+              </CommentContainer>
+              <CommentContainer>
+                <ReactStars
+                  count={5}
+                  value={4.8}
+                  onChange={() => {}}
+                  size={24}
+                  activeColor="#ffd700"
+                />
+                <Discount>Produto exelente de boa qualidade</Discount>
+                <Discount>
+                  <strong>Josue</strong>
+                  <DateRef>10/10/1010</DateRef>
+                </Discount>
+              </CommentContainer>
+              <CommentContainer>
+                <ReactStars
+                  count={5}
+                  value={4.8}
+                  onChange={() => {}}
+                  size={24}
+                  activeColor="#ffd700"
+                />
+                <Discount>Produto exelente de boa qualidade</Discount>
+                <Discount>
+                  <strong>Josue</strong>
+                  <DateRef>10/10/1010</DateRef>
+                </Discount>
+              </CommentContainer>
+            </ContainerDescriptionTwo>
+            <VejaMaisContainer>
+              <Buttom full={false} small={true} outlined={true} theme="dark">
+                <FaSearchPlus /> VEJA MAIS COMENTÁRIOS
+              </Buttom>
+            </VejaMaisContainer>
           </Content>
         </FixedLayout>
       </CenterContainer>
