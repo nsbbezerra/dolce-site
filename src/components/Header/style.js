@@ -7,10 +7,6 @@ export const Menu = styled.nav`
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 3px;
-  padding-top: 10px;
-  padding-bottom: 5px;
-  border-top: 1px solid ${general.colors.goldVariation};
   transition: all 0.3s;
   @media (max-width: 950px) {
     display: flex;
@@ -43,7 +39,7 @@ export const SubMenu = styled.div`
   width: 90%;
   left: 5%;
   right: 5%;
-  top: 105px;
+  top: 58px;
   height: 75vh;
   padding: 15px;
   transition: all 0.3s;
@@ -143,19 +139,20 @@ export const MenuItem = styled.span`
   align-items: center;
   padding-left: 15px;
   padding-right: 15px;
+  height: 50px;
   font-family: "Saira Condensed", sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
   cursor: pointer;
+  border-radius: ${general.cssDefault.radius}px;
   transition: all 0.3s;
   color: #222;
-  padding-bottom: 5px;
   &:last-child {
     margin-right: 0;
   }
   &:hover {
+    background: ${general.colors.dark};
     color: ${general.colors.light};
-    border-bottom: 3px solid ${general.colors.light};
   }
   @media (max-width: 950px) {
     height: 45px;
@@ -213,20 +210,21 @@ export const MenuItemMenu = styled.span`
   padding-left: 15px;
   padding-right: 15px;
   font-family: "Anton", sans-serif;
+  height: 50px;
   font-weight: 400;
   font-size: 1.6rem;
   margin-top: 0.5px;
   cursor: pointer;
   transition: all 0.3s;
   color: ${general.colors.dark};
-  padding-bottom: 5px;
+  border-radius: ${general.cssDefault.radius}px;
   user-select: none;
   &:last-child {
     margin-right: 0;
   }
   &:hover {
+    background: ${general.colors.dark};
     color: ${general.colors.light};
-    border-bottom: 3px solid ${general.colors.light};
     ${SubMenu} {
       display: flex;
     }

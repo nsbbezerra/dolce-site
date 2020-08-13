@@ -19,17 +19,20 @@ export const Banner = styled.img`
 
 export const Container = styled.div`
   width: 100%;
+  margin-top: 62px;
 `;
 
 export const BtnGhost = styled.button`
   border: 0;
   background: 0;
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   transition: all 0.3s;
-  margin-right: 40px;
+  margin-right: 20px;
+  margin-top: 2px;
+  color: ${general.colors.dark};
   cursor: pointer;
   &:hover {
-    filter: brightness(1.075);
+    color: ${general.colors.darkVariation};
   }
   &:active {
     transform: scale(0.98);
@@ -48,14 +51,15 @@ export const BtnLogin = styled.button`
   align-items: center;
   border: 0;
   background: 0;
-  font-size: 1.6rem;
+  font-size: 3rem;
   font-weight: 500;
   transition: all 0.3s;
+  color: ${general.colors.dark};
   font-family: "Roboto", sans-serif;
   color: ${general.colors.dark};
   cursor: pointer;
   &:hover {
-    filter: brightness(1.075);
+    color: ${general.colors.darkVariation};
   }
   &:active {
     transform: scale(0.98);
@@ -72,13 +76,14 @@ export const LabelButton = styled.span`
   min-width: 18px;
   width: max-content;
   height: 18px;
-  background-color: ${general.colors.dark};
-  color: ${general.colors.light};
+  background-color: ${general.colors.light};
+  color: ${general.colors.dark};
   border-radius: 100%;
   font-size: 9px;
   padding: 2px;
   position: absolute;
-  margin-left: -8px;
+  margin-left: -10px;
+  margin-top: -3px;
 `;
 
 export const Title = styled.h1`
