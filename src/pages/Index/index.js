@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import {
   Container,
-  Banner,
   Title,
   FixedLayout,
   CenterContainer,
@@ -18,7 +17,7 @@ import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import { useLocation } from "react-router-dom";
 import { FaSearchPlus } from "react-icons/fa";
 import Buttom from "../../components/Button/index";
-
+import Banner from "../../components/Banner/index";
 import breakpoints from "../../configs/sliderConfig";
 
 export default function Index() {
@@ -32,11 +31,7 @@ export default function Index() {
     <Container>
       <CenterContainer>
         <FixedLayout>
-          <Banner
-            src={
-              "https://feiravip.com/wp-content/uploads/2019/04/1550581280-banner-home-pv19-v3.jpg"
-            }
-          />
+          <Banner />
 
           <Content>
             <TitleJumbotron>Procure pelas Marcas</TitleJumbotron>

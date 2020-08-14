@@ -3,7 +3,7 @@ import { Button, Label, Content } from "./style";
 import general from "../../configs/general";
 
 const ButtonComponent = React.forwardRef((props, ref, ...rest) => {
-  const dark = { background: general.colors.dark, color: general.colors.dark };
+  const dark = { background: general.colors.dark, color: general.colors.light };
   const gold = { background: general.colors.gold, color: general.colors.dark };
   const light = {
     background: general.colors.light,

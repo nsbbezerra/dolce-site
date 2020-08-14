@@ -30,7 +30,7 @@ export const Menu = styled.nav`
 `;
 
 export const SubMenu = styled.div`
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 1);
   backdrop-filter: blur(15px);
   border: 1.5px solid ${general.colors.gold};
   display: none;

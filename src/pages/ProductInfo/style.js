@@ -140,7 +140,7 @@ export const ColorInfoContainer = styled.div`
   flex-direction: column;
   cursor: ${(props) => (props.disable === true ? "not-allowed" : "pointer")};
   opacity: ${(props) => (props.disable === true ? 0.5 : 1)};
-  background: ${(props) => (props.check === true ? general.colors.gold : "")};
+  background: ${(props) => (props.check === true ? general.colors.gray : "")};
   &:hover {
     transform: ${(props) =>
       props.disable === true ? "scale(1)" : "scale(1.02)"};
@@ -172,7 +172,7 @@ export const SizeInfoContainer = styled.div`
   flex-direction: column;
   cursor: ${(props) => (props.disable === true ? "not-allowed" : "pointer")};
   opacity: ${(props) => (props.disable === true ? 0.5 : 1)};
-  background: ${(props) => (props.check === true ? general.colors.gold : "")};
+  background: ${(props) => (props.check === true ? general.colors.gray : "")};
   &:hover {
     transform: ${(props) =>
       props.disable === true ? "scale(1)" : "scale(1.02)"};

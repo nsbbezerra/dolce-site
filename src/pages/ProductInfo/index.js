@@ -4,7 +4,6 @@ import {
   Content,
   CenterContainer,
   FixedLayout,
-  Banner,
   VejaMaisContainer,
 } from "../../styles/style";
 import { ContainerBreadCrumb, BreadCrumb } from "../Products/style";
@@ -33,8 +32,6 @@ import {
   InfoColor,
   SizeInfoContainer,
   TextArea,
-  RowQtd,
-  Input,
   ContainerDescriptionTwo,
   CommentContainer,
   DateRef,
@@ -47,6 +44,7 @@ import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import { FaShoppingCart, FaSearchPlus } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
 import ReactStars from "react-rating-stars-component";
+import Banner from "../../components/Banner/index";
 
 export default function ProductsInfo() {
   const { pathname } = useLocation();
@@ -93,11 +91,7 @@ export default function ProductsInfo() {
     <Container>
       <CenterContainer>
         <FixedLayout>
-          <Banner
-            src={
-              "https://feiravip.com/wp-content/uploads/2019/04/1550581280-banner-home-pv19-v3.jpg"
-            }
-          />
+          <Banner />
           <Content>
             <ContainerBreadCrumb>
               <BreadCrumb>HOME / CAMISETAS</BreadCrumb>
@@ -239,13 +233,6 @@ export default function ProductsInfo() {
                         </SizeInfoContainer>
                       </Carousel>
                     </div>
-                    <RowQtd>
-                      QUANTIDADE:
-                      <Input
-                        type="number"
-                        style={{ width: 80, marginLeft: 15 }}
-                      />
-                    </RowQtd>
                   </div>
                   <div>
                     <Buttom full={true}>

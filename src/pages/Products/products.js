@@ -3,7 +3,6 @@ import {
   Container,
   Content,
   FixedLayout,
-  Banner,
   CenterContainer,
   Spaced,
 } from "../../styles/style";
@@ -33,6 +32,7 @@ import Checkbox from "../../components/Checkbox/index";
 import { useLocation } from "react-router-dom";
 import breakpoints from "../../configs/sliderConfig";
 import Carousel from "@brainhubeu/react-carousel";
+import Banner from "../../components/Banner/index";
 
 export default function Products() {
   const [checked, setChecked] = useState(true);
@@ -48,11 +48,7 @@ export default function Products() {
     <Container>
       <CenterContainer>
         <FixedLayout>
-          <Banner
-            src={
-              "https://feiravip.com/wp-content/uploads/2019/04/1550581280-banner-home-pv19-v3.jpg"
-            }
-          />
+          <Banner />
           <Content>
             <ContainerBreadCrumb>
               <BreadCrumb>HOME / CAMISETAS</BreadCrumb>

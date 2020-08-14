@@ -13,10 +13,6 @@ export const FixedLayout = styled.div`
   max-width: 1380px;
 `;
 
-export const Banner = styled.img`
-  width: 100%;
-`;
-
 export const Container = styled.div`
   width: 100%;
   margin-top: 62px;
@@ -25,7 +21,7 @@ export const Container = styled.div`
 export const BtnGhost = styled.button`
   border: 0;
   background: 0;
-  font-size: 3.2rem;
+  font-size: 2.9rem;
   transition: all 0.3s;
   margin-right: 20px;
   margin-top: 2px;

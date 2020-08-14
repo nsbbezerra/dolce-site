@@ -29,8 +29,10 @@ import {
   AiOutlineFacebook,
   AiOutlineInstagram,
   AiOutlineTwitter,
+  AiOutlineUser,
 } from "react-icons/ai";
-import { FaBars, FaTimes, FaUser, FaShoppingBag } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { BsBag, BsBagFill } from "react-icons/bs";
 import general from "../../configs/general";
 import { useHistory } from "react-router-dom";
 import Carousel from "@brainhubeu/react-carousel";
@@ -51,6 +53,7 @@ export default function Header() {
   function goToProducts(rt) {
     history.push(`/${rt}`);
   }
+
   return (
     <header className="header-app">
       <CenterContainer>
@@ -273,12 +276,12 @@ export default function Header() {
             </Menu>
             <div className="right-header">
               <BtnLogin style={{ marginRight: 20 }}>
-                <FaUser />
+                <AiOutlineUser />
               </BtnLogin>
 
-              <BtnGhost>
+              <BtnGhost onClick={() => goToProducts("carrinho")}>
                 <LabelButton>0</LabelButton>
-                <FaShoppingBag />
+                <BsBag />
               </BtnGhost>
 
               <a href="/" className="social-media-header">
