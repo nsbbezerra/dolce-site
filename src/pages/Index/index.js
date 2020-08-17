@@ -178,7 +178,7 @@ export default function Index() {
               />
             </Grid>
             <VejaMaisContainer style={{ marginTop: 40 }}>
-              <Buttom full={false} small={true} outlined={true} theme="dark">
+              <Buttom full={false} small={true} outlined={true}>
                 <FaSearchPlus /> VEJA MAIS PRODUTOS
               </Buttom>
             </VejaMaisContainer>

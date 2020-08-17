@@ -5,6 +5,7 @@ import IndexPage from "../pages/Index/index";
 import Products from "../pages/Products/products";
 import ProductsInfo from "../pages/ProductInfo/index";
 import Chart from "../pages/Chart/index";
+import Checkout from "../pages/Checkout/index";
 
 export default function RoutesApp() {
   return (
@@ -20,6 +21,9 @@ export default function RoutesApp() {
       </Route>
       <Route path="/carrinho">
         <Chart />
+      </Route>
+      <Route path="/checkout">
+        <Checkout />
       </Route>
     </Switch>
   );

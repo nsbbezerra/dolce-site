@@ -78,7 +78,7 @@ export default function Header() {
                 <MenuItems>
                   <MenuItemMenu>
                     <FaBars style={{ marginRight: 10 }} />
-                    MENU
+                    DEPARTAMENTOS
                     <SubMenu>
                       <ContainerOfCarrousel>
                         <Carousel

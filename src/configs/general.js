@@ -5,7 +5,7 @@ const configs = {
     error: "#B80C09",
     success: "#49dcb1",
     negative: "#f4989c",
-    gold: "#d4af37",
+    gold: "#E5C100",
     gray: "#eee",
     goldVariation: "#eec94e",
     darkVariation: "#333",

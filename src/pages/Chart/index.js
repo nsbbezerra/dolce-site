@@ -10,9 +10,6 @@ import {
   CardInfo,
   InfoTitle,
   InfoDesc,
-  SizeRow,
-  CheckColor,
-  CheckSize,
   QtdContainer,
   QtdInfo,
   PricePromo,
@@ -22,6 +19,7 @@ import {
   ContainerResumeInfo,
   ResumeInfo,
   SpaceBtn,
+  BtnTrash,
 } from "./style";
 import {
   Container,
@@ -43,10 +41,17 @@ import {
   AiOutlineCheck,
   AiOutlineShoppingCart,
 } from "react-icons/ai";
-import { FaRegCreditCard } from "react-icons/fa";
+import { FaRegCreditCard, FaTrashAlt } from "react-icons/fa";
 import Buttom from "../../components/Button/index";
+import { useHistory } from "react-router-dom";
 
 export default function ChartApp() {
+  const history = useHistory();
+
+  function goToCheckout() {
+    history.push("/checkout");
+  }
+
   return (
     <Container>
       <CenterContainer>
@@ -58,6 +63,9 @@ export default function ChartApp() {
                 <TitleChart>Meu Carrinho</TitleChart>
 
                 <ChartCard>
+                  <BtnTrash>
+                    <FaTrashAlt />
+                  </BtnTrash>
                   <GridChartCard>
                     <CardImage image="https://static.zattini.com.br/produtos/malha-facinelli-lurex-babados-feminina/06/H37-0613-006/H37-0613-006_vitrine2.jpg?ts=1597131858" />
                     <CardInfo>
@@ -67,202 +75,38 @@ export default function ChartApp() {
                       <RefProduct>
                         Ref: <strong># H37-0613-006-02</strong>
                       </RefProduct>
-                      <SizeRow>
-                        <InfoDesc>
-                          <strong>COR:</strong>
-                        </InfoDesc>
-                        <CheckColor background="yellow" checked={true} />
-                        <CheckColor background="blue" checked={false} />
-                        <CheckColor background="red" checked={false} />
-                        <CheckColor background="black" checked={false} />
-                        <CheckColor background="white" checked={false} />
-                      </SizeRow>
-                      <SizeRow>
-                        <InfoDesc>
-                          <strong>TAMANHO:</strong>
-                        </InfoDesc>
-                        <CheckSize checked={true}>P</CheckSize>
-                        <CheckSize checked={false}>M</CheckSize>
-                        <CheckSize checked={false}>G</CheckSize>
-                        <CheckSize checked={false}>EG</CheckSize>
-                        <CheckSize checked={false}>EXG</CheckSize>
-                      </SizeRow>
-                    </CardInfo>
-                  </GridChartCard>
-                  <QtdContainer>
-                    <QtdInfo>
-                      <InfoDesc>
-                        <strong>Quantidade:</strong>
-                      </InfoDesc>
-                      <BtnAct>
-                        <AiOutlineMinusCircle />
-                      </BtnAct>
-                      <Input type="number" style={{ width: 50 }} value={0} />
-                      <BtnAct>
-                        <AiOutlinePlusCircle />
-                      </BtnAct>
-                    </QtdInfo>
-                    <QtdInfo>
-                      <PricePromo>R$ 122,00</PricePromo>
-                      <Price>R$ 100,00</Price>
-                    </QtdInfo>
-                  </QtdContainer>
-                </ChartCard>
 
-                <ChartCard>
-                  <GridChartCard>
-                    <CardImage image="https://static.zattini.com.br/produtos/malha-facinelli-lurex-babados-feminina/06/H37-0613-006/H37-0613-006_vitrine2.jpg?ts=1597131858" />
-                    <CardInfo>
-                      <InfoTitle>
-                        Malha Facinelli Lurex Babados Feminina
-                      </InfoTitle>
-                      <RefProduct>
-                        Ref: <strong># H37-0613-006-02</strong>
-                      </RefProduct>
-                      <SizeRow>
-                        <InfoDesc>
-                          <strong>COR:</strong>
-                        </InfoDesc>
-                        <CheckColor background="yellow" checked={true} />
-                        <CheckColor background="blue" checked={false} />
-                        <CheckColor background="red" checked={false} />
-                        <CheckColor background="black" checked={false} />
-                        <CheckColor background="white" checked={false} />
-                      </SizeRow>
-                      <SizeRow>
-                        <InfoDesc>
-                          <strong>TAMANHO:</strong>
-                        </InfoDesc>
-                        <CheckSize checked={true}>P</CheckSize>
-                        <CheckSize checked={false}>M</CheckSize>
-                        <CheckSize checked={false}>G</CheckSize>
-                        <CheckSize checked={false}>EG</CheckSize>
-                        <CheckSize checked={false}>EXG</CheckSize>
-                      </SizeRow>
-                    </CardInfo>
-                  </GridChartCard>
-                  <QtdContainer>
-                    <QtdInfo>
                       <InfoDesc>
-                        <strong>Quantidade:</strong>
+                        <strong>COR:</strong> AMARELO
                       </InfoDesc>
-                      <BtnAct>
-                        <AiOutlineMinusCircle />
-                      </BtnAct>
-                      <Input type="number" style={{ width: 50 }} value={0} />
-                      <BtnAct>
-                        <AiOutlinePlusCircle />
-                      </BtnAct>
-                    </QtdInfo>
-                    <QtdInfo>
-                      <PricePromo>R$ 122,00</PricePromo>
-                      <Price>R$ 100,00</Price>
-                    </QtdInfo>
-                  </QtdContainer>
-                </ChartCard>
 
-                <ChartCard>
-                  <GridChartCard>
-                    <CardImage image="https://static.zattini.com.br/produtos/malha-facinelli-lurex-babados-feminina/06/H37-0613-006/H37-0613-006_vitrine2.jpg?ts=1597131858" />
-                    <CardInfo>
-                      <InfoTitle>
-                        Malha Facinelli Lurex Babados Feminina
-                      </InfoTitle>
-                      <RefProduct>
-                        Ref: <strong># H37-0613-006-02</strong>
-                      </RefProduct>
-                      <SizeRow>
-                        <InfoDesc>
-                          <strong>COR:</strong>
-                        </InfoDesc>
-                        <CheckColor background="yellow" checked={true} />
-                        <CheckColor background="blue" checked={false} />
-                        <CheckColor background="red" checked={false} />
-                        <CheckColor background="black" checked={false} />
-                        <CheckColor background="white" checked={false} />
-                      </SizeRow>
-                      <SizeRow>
-                        <InfoDesc>
-                          <strong>TAMANHO:</strong>
-                        </InfoDesc>
-                        <CheckSize checked={true}>P</CheckSize>
-                        <CheckSize checked={false}>M</CheckSize>
-                        <CheckSize checked={false}>G</CheckSize>
-                        <CheckSize checked={false}>EG</CheckSize>
-                        <CheckSize checked={false}>EXG</CheckSize>
-                      </SizeRow>
+                      <InfoDesc>
+                        <strong>TAMANHO:</strong> P
+                      </InfoDesc>
+                      <QtdContainer>
+                        <QtdInfo>
+                          <InfoDesc>
+                            <strong>Quantidade:</strong>
+                          </InfoDesc>
+                          <BtnAct>
+                            <AiOutlineMinusCircle />
+                          </BtnAct>
+                          <Input
+                            type="number"
+                            style={{ width: 50 }}
+                            value={0}
+                          />
+                          <BtnAct>
+                            <AiOutlinePlusCircle />
+                          </BtnAct>
+                        </QtdInfo>
+                        <QtdInfo>
+                          <PricePromo>R$ 122,00</PricePromo>
+                          <Price>R$ 100,00</Price>
+                        </QtdInfo>
+                      </QtdContainer>
                     </CardInfo>
                   </GridChartCard>
-                  <QtdContainer>
-                    <QtdInfo>
-                      <InfoDesc>
-                        <strong>Quantidade:</strong>
-                      </InfoDesc>
-                      <BtnAct>
-                        <AiOutlineMinusCircle />
-                      </BtnAct>
-                      <Input type="number" style={{ width: 50 }} value={0} />
-                      <BtnAct>
-                        <AiOutlinePlusCircle />
-                      </BtnAct>
-                    </QtdInfo>
-                    <QtdInfo>
-                      <PricePromo>R$ 122,00</PricePromo>
-                      <Price>R$ 100,00</Price>
-                    </QtdInfo>
-                  </QtdContainer>
-                </ChartCard>
-
-                <ChartCard>
-                  <GridChartCard>
-                    <CardImage image="https://static.zattini.com.br/produtos/malha-facinelli-lurex-babados-feminina/06/H37-0613-006/H37-0613-006_vitrine2.jpg?ts=1597131858" />
-                    <CardInfo>
-                      <InfoTitle>
-                        Malha Facinelli Lurex Babados Feminina
-                      </InfoTitle>
-                      <RefProduct>
-                        Ref: <strong># H37-0613-006-02</strong>
-                      </RefProduct>
-                      <SizeRow>
-                        <InfoDesc>
-                          <strong>COR:</strong>
-                        </InfoDesc>
-                        <CheckColor background="yellow" checked={true} />
-                        <CheckColor background="blue" checked={false} />
-                        <CheckColor background="red" checked={false} />
-                        <CheckColor background="black" checked={false} />
-                        <CheckColor background="white" checked={false} />
-                      </SizeRow>
-                      <SizeRow>
-                        <InfoDesc>
-                          <strong>TAMANHO:</strong>
-                        </InfoDesc>
-                        <CheckSize checked={true}>P</CheckSize>
-                        <CheckSize checked={false}>M</CheckSize>
-                        <CheckSize checked={false}>G</CheckSize>
-                        <CheckSize checked={false}>EG</CheckSize>
-                        <CheckSize checked={false}>EXG</CheckSize>
-                      </SizeRow>
-                    </CardInfo>
-                  </GridChartCard>
-                  <QtdContainer>
-                    <QtdInfo>
-                      <InfoDesc>
-                        <strong>Quantidade:</strong>
-                      </InfoDesc>
-                      <BtnAct>
-                        <AiOutlineMinusCircle />
-                      </BtnAct>
-                      <Input type="number" style={{ width: 50 }} value={0} />
-                      <BtnAct>
-                        <AiOutlinePlusCircle />
-                      </BtnAct>
-                    </QtdInfo>
-                    <QtdInfo>
-                      <PricePromo>R$ 122,00</PricePromo>
-                      <Price>R$ 100,00</Price>
-                    </QtdInfo>
-                  </QtdContainer>
                 </ChartCard>
               </ContainerChart>
 
@@ -299,7 +143,11 @@ export default function ChartApp() {
 
                   <SpaceBtn />
                   <div style={{ width: "100%" }}>
-                    <Buttom full={true} theme="dark">
+                    <Buttom
+                      full={true}
+                      theme="dark"
+                      onClick={() => goToCheckout()}
+                    >
                       <AiOutlineCheck /> FINALIZAR COMPRA
                     </Buttom>
                     <SpaceBtn />

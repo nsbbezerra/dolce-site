@@ -7,8 +7,9 @@ export const Menu = styled.nav`
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-width: 736px;
   transition: all 0.3s;
-  @media (max-width: 950px) {
+  @media (max-width: 1250px) {
     display: flex;
     margin-left: ${(props) => (props.active === true ? -120 : 0)}%;
     flex-direction: column;
@@ -47,7 +48,7 @@ export const SubMenu = styled.div`
   overflow: auto;
   border-bottom-left-radius: ${general.cssDefault.radius}px;
   border-bottom-right-radius: ${general.cssDefault.radius}px;
-  @media (max-width: 950px) {
+  @media (max-width: 1250px) {
     width: 100%;
     grid-template-columns: 1fr;
     height: 85vh;
@@ -71,7 +72,7 @@ export const SubMenuTitle = styled.span`
   font-size: 1.8rem;
   color: ${general.colors.dark};
   margin-bottom: 10px;
-  @media (max-width: 950px) {
+  @media (max-width: 1250px) {
     padding: 20px;
   }
 `;
@@ -93,7 +94,7 @@ export const SubMenuLink = styled(Link)`
   &:hover {
     text-decoration: underline;
   }
-  @media (max-width: 950px) {
+  @media (max-width: 1250px) {
     height: 40px;
     padding-left: 20px;
     padding-right: 20px;
@@ -105,7 +106,7 @@ export const MenuContainer = styled.ul`
   list-style: none;
   width: 100%;
   justify-content: center;
-  @media (max-width: 950px) {
+  @media (max-width: 1250px) {
     flex-direction: column;
     width: 100%;
   }
@@ -121,7 +122,7 @@ export const SubMenuItemsContainer = styled.div`
   &:last-child {
     border-right: 0;
   }
-  @media (max-width: 950px) {
+  @media (max-width: 1250px) {
     border-right: 0;
   }
 `;
@@ -154,7 +155,7 @@ export const MenuItem = styled.span`
     background: ${general.colors.dark};
     color: ${general.colors.light};
   }
-  @media (max-width: 950px) {
+  @media (max-width: 1250px) {
     height: 45px;
     font-size: 1.7rem;
     border-bottom: 1px solid ${general.colors.gray};
@@ -229,7 +230,7 @@ export const MenuItemMenu = styled.span`
       display: flex;
     }
   }
-  @media (max-width: 950px) {
+  @media (max-width: 1250px) {
     height: 45px;
     font-size: 1.7rem;
     border-bottom: 1px solid ${general.colors.gray};
@@ -273,7 +274,7 @@ export const MenuBarButtom = styled.button`
   align-items: center;
   margin-left: 40px;
   color: ${general.colors.dark};
-  @media (min-width: 950px) {
+  @media (min-width: 1250px) {
     display: none;
   }
 `;

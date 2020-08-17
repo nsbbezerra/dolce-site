@@ -480,7 +480,7 @@ export default function ProductsInfo() {
               </CommentContainer>
             </ContainerDescriptionTwo>
             <VejaMaisContainer>
-              <Buttom full={false} small={true} outlined={true} theme="dark">
+              <Buttom full={false} small={true} outlined={true}>
                 <FaSearchPlus /> VEJA MAIS COMENTÁRIOS
               </Buttom>
             </VejaMaisContainer>

@@ -52,8 +52,9 @@ export const GridChartCard = styled.div`
   display: grid;
   grid-template-columns: 130px 1fr;
   grid-gap: 15px;
-  border-bottom: 1.5px solid ${general.colors.gray};
-  padding-bottom: 15px;
+  @media (max-width: 650px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const CardImage = styled.div`
@@ -85,63 +86,11 @@ export const InfoDesc = styled.span`
   margin-right: 5px;
 `;
 
-export const SizeRow = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  margin-bottom: 5px;
-  margin-top: 5px;
-`;
-
-export const CheckColor = styled.div`
-  display: flex;
-  width: 25px;
-  height: 25px;
-  background: ${(props) => props.background || ""};
-  border-radius: ${general.cssDefault.radius}px;
-  margin-right: 5px;
-  border-width: ${(props) => (props.checked === true ? 1.5 : 1)}px;
-  border-style: ${(props) => (props.checked === true ? "solid" : "dashed")};
-  border-color: ${(props) =>
-    props.checked === true ? general.colors.gold : general.colors.dark};
-  cursor: pointer;
-  &:hover {
-    border-width: 1.5px;
-    border-style: solid;
-    border-color: ${general.colors.dark};
-  }
-`;
-
-export const CheckSize = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Saira Condensed", sans-serif;
-  font-size: 12px;
-  color: #555;
-  width: 25px;
-  height: 25px;
-  background: ${(props) => props.background || ""};
-  border-radius: ${general.cssDefault.radius}px;
-  margin-right: 5px;
-  border-width: ${(props) => (props.checked === true ? 1.5 : 1)}px;
-  border-style: ${(props) => (props.checked === true ? "solid" : "dashed")};
-  border-color: ${(props) =>
-    props.checked === true ? general.colors.gold : general.colors.dark};
-  cursor: pointer;
-  &:hover {
-    border-width: 1.5px;
-    border-style: solid;
-    border-color: ${general.colors.dark};
-  }
-`;
-
 export const QtdContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 15px;
 `;
 
 export const QtdInfo = styled.div`
@@ -159,7 +108,7 @@ export const PricePromo = styled.span`
   display: block;
   color: #777;
   text-decoration: line-through;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 400;
   font-family: "Saira Condensed", sans-serif;
   line-height: 25px;
@@ -170,7 +119,7 @@ export const Price = styled.span`
   display: block;
   color: ${general.colors.dark};
   text-decoration: unset;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 600;
   font-family: "Saira Condensed", sans-serif;
   line-height: 25px;
@@ -188,9 +137,9 @@ export const ResumeInfo = styled.span`
 
 export const Input = styled.input`
   border-radius: ${general.cssDefault.radius}px;
-  padding: 7px;
+  padding: 5px;
   font-family: "Saira Condensed", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   border: 1px solid ${general.colors.dark};
 `;
 
@@ -216,11 +165,11 @@ export const ContainerResumeInfo = styled.div`
   align-items: center;
   width: 100%;
   height: 60px;
-  border-bottom: 1.5px solid #ccc;
   font-weight: 400;
   font-size: 20px;
   font-family: "Saira Condensed", sans-serif;
   line-height: 25px;
+  border-bottom: 1.5px solid #ddd;
   &:last-child {
     border-bottom: 0;
   }
@@ -229,4 +178,21 @@ export const ContainerResumeInfo = styled.div`
 export const SpaceBtn = styled.div`
   width: 100%;
   height: 15px;
+`;
+
+export const BtnTrash = styled.button`
+  border: 0;
+  background: none;
+  font-size: 25px;
+  color: ${general.colors.error};
+  float: right;
+  margin-bottom: -40px;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    transform: scale(0.97);
+  }
 `;

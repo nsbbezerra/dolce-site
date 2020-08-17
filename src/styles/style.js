@@ -16,6 +16,9 @@ export const FixedLayout = styled.div`
 export const Container = styled.div`
   width: 100%;
   margin-top: 62px;
+  @media (max-width: 950px) {
+    margin-top: 50px;
+  }
 `;
 
 export const BtnGhost = styled.button`
