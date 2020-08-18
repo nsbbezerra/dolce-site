@@ -42,7 +42,6 @@ import { AiFillBank, AiOutlinePlus } from "react-icons/ai";
 import Buttom from "../../components/Button/index";
 import { useLocation } from "react-router-dom";
 
-import card from "../../assets/card.png";
 import bb from "../../assets/bb.svg";
 import ba from "../../assets/ba.svg";
 import bradesco from "../../assets/bradesco.svg";
