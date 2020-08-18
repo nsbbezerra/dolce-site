@@ -33,9 +33,6 @@ export const BtnGhost = styled.button`
   &:hover {
     color: ${general.colors.darkVariation};
   }
-  &:active {
-    transform: scale(0.98);
-  }
   @media (max-width: 875px) {
     margin-right: 0px;
   }
@@ -59,9 +56,6 @@ export const BtnLogin = styled.button`
   cursor: pointer;
   &:hover {
     color: ${general.colors.darkVariation};
-  }
-  &:active {
-    transform: scale(0.98);
   }
   @media (max-width: 690px) {
     display: none;

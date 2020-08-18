@@ -5,7 +5,6 @@ import {
   FixedLayout,
   BtnGhost,
   LabelButton,
-  BtnLogin,
 } from "../../styles/style";
 import {
   Menu,
@@ -24,15 +23,22 @@ import {
   ContainerOfCarrousel,
   ContainerContentMenu,
   ContainerInfoMenu,
+  DropdownUser,
+  DropdownMenu,
+  DropdownItems,
+  DropdownItem,
+  BtnLogin,
 } from "./style";
 import {
   AiOutlineFacebook,
   AiOutlineInstagram,
   AiOutlineTwitter,
   AiOutlineUser,
+  AiOutlineProfile,
 } from "react-icons/ai";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { BsBag, BsBagFill } from "react-icons/bs";
+import { FiPackage } from "react-icons/fi";
 import general from "../../configs/general";
 import { useHistory } from "react-router-dom";
 import Carousel from "@brainhubeu/react-carousel";
@@ -277,6 +283,21 @@ export default function Header() {
             <div className="right-header">
               <BtnLogin style={{ marginRight: 20 }}>
                 <AiOutlineUser />
+                <DropdownUser>
+                  <DropdownMenu>
+                    <DropdownItems>
+                      <DropdownItem to="/dados">
+                        <AiOutlineProfile style={{ marginRight: 15 }} /> MEUS
+                        DADOS
+                      </DropdownItem>
+                    </DropdownItems>
+                    <DropdownItems>
+                      <DropdownItem to="/pedidos">
+                        <FiPackage style={{ marginRight: 15 }} /> MEUS PEDIDOS
+                      </DropdownItem>
+                    </DropdownItems>
+                  </DropdownMenu>
+                </DropdownUser>
               </BtnLogin>
 
               <BtnGhost onClick={() => goToProducts("carrinho")}>

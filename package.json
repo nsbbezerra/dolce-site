@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@brainhubeu/react-carousel": "^1.19.14",
+    "@wenmu/react-steps": "^1.0.0",
+    "rc-steps": "^4.1.2",
     "react": "^16.13.1",
     "react-collapsible": "^2.8.0",
     "react-dom": "^16.13.1",

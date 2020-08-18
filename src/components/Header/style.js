@@ -339,3 +339,65 @@ export const ContainerContentMenu = styled.div`
 export const ContainerInfoMenu = styled.div`
   width: 100%;
 `;
+
+export const DropdownUser = styled.div`
+  background: #fff;
+  display: none;
+  border-radius: ${general.cssDefault.radius}px;
+  border: 1.5px solid ${general.colors.dark};
+  overflow: hidden;
+  position: absolute;
+  top: 55px;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s;
+`;
+
+export const DropdownMenu = styled.ul`
+  width: 100%;
+  list-style: none;
+`;
+
+export const DropdownItems = styled.li`
+  width: 100%;
+`;
+
+export const DropdownItem = styled(Link)`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none;
+  font-family: "Saira Condensed", sans-serif;
+  color: ${general.colors.dark};
+  font-size: 1.7rem;
+  transition: all 0.3s;
+  &:hover {
+    background: ${general.colors.gold};
+    color: ${general.colors.dark};
+  }
+`;
+
+export const BtnLogin = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  background: 0;
+  font-size: 3rem;
+  font-weight: 500;
+  height: 50px;
+  transition: all 0.3s;
+  color: ${general.colors.dark};
+  font-family: "Roboto", sans-serif;
+  color: ${general.colors.dark};
+  cursor: pointer;
+  &:hover {
+    color: ${general.colors.darkVariation};
+    ${DropdownUser} {
+      display: block;
+    }
+  }
+  @media (max-width: 690px) {
+    display: none;
+  }
+`;
