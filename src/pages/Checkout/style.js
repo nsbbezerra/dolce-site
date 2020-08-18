@@ -36,6 +36,7 @@ export const InfoContainer = styled.div`
   border-radius: ${general.cssDefault.radius}px;
   padding: 10px;
   margin-bottom: 10px;
+  overflow: hidden;
   &:last-child {
     margin-bottom: 0;
   }
@@ -98,11 +99,24 @@ export const GridCity = styled.div`
   display: grid;
   grid-template-columns: 1fr 150px 100px;
   grid-gap: 10px;
+  @media (max-width: 710px) {
+    grid-template-columns: 1fr 100px 60px;
+  }
+  @media (max-width: 390px) {
+    grid-template-columns: 1fr 80px 40px;
+  }
 `;
 
 export const GridCardNumber = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin-bottom: 10px;
+`;
+
+export const GridTransfer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
   margin-bottom: 10px;
 `;
@@ -128,4 +142,24 @@ export const GridCreditCard = styled.div`
   grid-gap: 15px;
   justify-content: center;
   justify-items: center;
+  @media (max-width: 765px) {
+    margin-bottom: 10px;
+  }
+`;
+
+export const HeaderTransfer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid ${general.colors.gray};
+`;
+
+export const ImgBank = styled.img`
+  height: 40px;
+  @media (max-width: 800px) {
+    height: inherit;
+    width: 80%;
+  }
 `;

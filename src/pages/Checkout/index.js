@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Container,
   CenterContainer,
@@ -22,24 +22,32 @@ import {
   DescCart,
   GridCreditCard,
   GridCardNumber,
+  GridTransfer,
+  HeaderTransfer,
+  ImgBank,
 } from "./style";
 import {
   GridChart,
   TitleChart,
   ContainerChart,
   ContainerResume,
+  ContainerResumeInfo,
+  ResumeInfo,
+  Price,
 } from "../Chart/style";
 import Collapse from "react-collapsible";
 import Checkbox from "../../components/Checkbox/index";
-import { FaCreditCard, FaMapMarkerAlt, FaSave } from "react-icons/fa";
+import { FaCreditCard, FaMapMarkerAlt, FaSave, FaCheck } from "react-icons/fa";
 import { AiFillBank, AiOutlinePlus } from "react-icons/ai";
 import Buttom from "../../components/Button/index";
+import { useLocation } from "react-router-dom";
 
 import card from "../../assets/card.png";
 import bb from "../../assets/bb.svg";
 import ba from "../../assets/ba.svg";
 import bradesco from "../../assets/bradesco.svg";
 import caixa from "../../assets/caixa.svg";
+import sicredi from "../../assets/sicredi.svg";
 import creditCard from "../../assets/credit-card.svg";
 
 export default function CheckoutApp() {
@@ -48,6 +56,12 @@ export default function CheckoutApp() {
   function handlePayOpt(opt) {
     setPayOpt(opt);
   }
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <Container>
@@ -75,6 +89,7 @@ export default function CheckoutApp() {
                         </div>
                       </Trigger>
                     }
+                    open={payOpt === "card" ? true : false}
                   >
                     <ContentContainer>
                       <GridCreditCard>
@@ -128,7 +143,7 @@ export default function CheckoutApp() {
                         </RowContainer>
                       </GridCreditCard>
                       <Buttom small={true}>
-                        <AiOutlinePlus /> ADICIONAR NOVO CARTÃO DE CRÉDITO
+                        <AiOutlinePlus /> ADICIONAR NOVO CARTÃO
                       </Buttom>
 
                       <InfoContainer style={{ marginTop: 10 }}>
@@ -176,8 +191,102 @@ export default function CheckoutApp() {
                         </div>
                       </Trigger>
                     }
+                    open={payOpt === "transfer" ? true : false}
                   >
-                    checkbox
+                    <ContentContainer>
+                      <GridTransfer>
+                        <InfoContainer>
+                          <HeaderTransfer>
+                            <ImgBank alt="Dolce Encanto" src={bb} />
+                          </HeaderTransfer>
+                          <div
+                            style={{ display: "flex", flexDirection: "column" }}
+                          >
+                            <DescCart>
+                              <strong>Agência:</strong> 9999-9
+                            </DescCart>
+                            <DescCart>
+                              <strong>Conta Corrente:</strong> 9999-9
+                            </DescCart>
+                            <DescCart>
+                              <strong>Dolce Encanto</strong>
+                            </DescCart>
+                          </div>
+                        </InfoContainer>
+                        <InfoContainer>
+                          <HeaderTransfer>
+                            <ImgBank alt="Dolce Encanto" src={bradesco} />
+                          </HeaderTransfer>
+                          <div
+                            style={{ display: "flex", flexDirection: "column" }}
+                          >
+                            <DescCart>
+                              <strong>Agência:</strong> 9999-9
+                            </DescCart>
+                            <DescCart>
+                              <strong>Conta Corrente:</strong> 9999-9
+                            </DescCart>
+                            <DescCart>
+                              <strong>Dolce Encanto</strong>
+                            </DescCart>
+                          </div>
+                        </InfoContainer>
+                        <InfoContainer>
+                          <HeaderTransfer>
+                            <ImgBank alt="Dolce Encanto" src={ba} />
+                          </HeaderTransfer>
+                          <div
+                            style={{ display: "flex", flexDirection: "column" }}
+                          >
+                            <DescCart>
+                              <strong>Agência:</strong> 9999-9
+                            </DescCart>
+                            <DescCart>
+                              <strong>Conta Corrente:</strong> 9999-9
+                            </DescCart>
+                            <DescCart>
+                              <strong>Dolce Encanto</strong>
+                            </DescCart>
+                          </div>
+                        </InfoContainer>
+                        <InfoContainer>
+                          <HeaderTransfer>
+                            <ImgBank alt="Dolce Encanto" src={caixa} />
+                          </HeaderTransfer>
+                          <div
+                            style={{ display: "flex", flexDirection: "column" }}
+                          >
+                            <DescCart>
+                              <strong>Agência:</strong> 9999-9
+                            </DescCart>
+                            <DescCart>
+                              <strong>Conta Corrente:</strong> 9999-9
+                            </DescCart>
+                            <DescCart>
+                              <strong>Dolce Encanto</strong>
+                            </DescCart>
+                          </div>
+                        </InfoContainer>
+                        <InfoContainer>
+                          <HeaderTransfer>
+                            <ImgBank alt="Dolce Encanto" src={sicredi} />
+                          </HeaderTransfer>
+                          <div
+                            style={{ display: "flex", flexDirection: "column" }}
+                          >
+                            <DescCart>
+                              <strong>Agência:</strong> 9999-9
+                            </DescCart>
+                            <DescCart>
+                              <strong>Conta Corrente:</strong> 9999-9
+                            </DescCart>
+                            <DescCart>
+                              <strong>Dolce Encanto</strong>
+                            </DescCart>
+                          </div>
+                        </InfoContainer>
+                      </GridTransfer>
+                    </ContentContainer>
                   </Collapse>
                 </ContainerCheckbox>
 
@@ -262,8 +371,28 @@ export default function CheckoutApp() {
                   </Collapse>
                 </ContainerCheckbox>
               </ContainerChart>
+
               <ContainerChart>
                 <TitleChart>Resumo da Compra</TitleChart>
+                <ContainerResume>
+                  <ContainerResumeInfo>
+                    <ResumeInfo>VALOR DA COMPRA</ResumeInfo>
+                    <Price>R$ 100,00</Price>
+                  </ContainerResumeInfo>
+                  <ContainerResumeInfo>
+                    <ResumeInfo>ENVIO</ResumeInfo>
+                    <Price>R$ 0,00</Price>
+                  </ContainerResumeInfo>
+                  <ContainerResumeInfo>
+                    <ResumeInfo>TOTAL</ResumeInfo>
+                    <Price>R$ 100,00</Price>
+                  </ContainerResumeInfo>
+                  <Spaced />
+                  <Buttom full={true} theme="success">
+                    <FaCheck />
+                    FINALIZAR COMPRA
+                  </Buttom>
+                </ContainerResume>
               </ContainerChart>
             </GridChart>
           </Content>

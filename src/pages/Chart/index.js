@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   GridChart,
   ContainerChart,
@@ -43,7 +43,7 @@ import {
 } from "react-icons/ai";
 import { FaRegCreditCard, FaTrashAlt } from "react-icons/fa";
 import Buttom from "../../components/Button/index";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 
 export default function ChartApp() {
   const history = useHistory();
@@ -51,6 +51,12 @@ export default function ChartApp() {
   function goToCheckout() {
     history.push("/checkout");
   }
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <Container>
