@@ -43,14 +43,11 @@ export const BtnMore = styled.span`
   align-items: center;
   height: 40px;
   border-radius: ${general.cssDefault.radius}px;
-  background: ${general.colors.gold};
-  color: ${general.colors.dark};
+  color: #0080e9;
   transition: all 0.3s;
   cursor: pointer;
   user-select: none;
-  &:hover {
-    background: ${general.colors.goldVariation};
-  }
+  text-decoration: underline;
 `;
 
 export const ContainerSteps = styled.div`

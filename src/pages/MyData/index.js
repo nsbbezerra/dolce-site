@@ -61,6 +61,10 @@ export default function MyDataApp() {
                   <MaskInput mask="99/99/9999" />
                 </div>
               </GridDate>
+              <div style={{ height: 20 }} />
+              <Buttom>
+                <FaSave /> SALVAR ALTERAÇÕES
+              </Buttom>
               <Spaced />
               <TitleCard>ENDEREÇO</TitleCard>
               <GridLogradouro>

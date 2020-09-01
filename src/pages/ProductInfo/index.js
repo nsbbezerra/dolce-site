@@ -123,63 +123,6 @@ export default function ProductsInfo() {
                       Em até: <strong>6x de R$ 20.00</strong> no Cartão de
                       Crédito
                     </Discount>
-                    <Discount style={{ marginTop: 40 }}>
-                      <strong>Selecione a Cor:</strong> Amarelo
-                    </Discount>
-                    <div style={{ width: "100%", marginTop: 8 }}>
-                      <Carousel
-                        slidesPerPage={4}
-                        arrows
-                        arrowLeft={
-                          <MdKeyboardArrowLeft
-                            color="#333"
-                            size={"4rem"}
-                            style={{ cursor: "pointer" }}
-                          />
-                        }
-                        arrowLeftDisabled={
-                          <MdKeyboardArrowLeft
-                            color="#ddd"
-                            size={"4rem"}
-                            style={{ cursor: "not-allowed" }}
-                          />
-                        }
-                        arrowRight={
-                          <MdKeyboardArrowRight
-                            color="#333"
-                            size={"4rem"}
-                            style={{ cursor: "pointer" }}
-                          />
-                        }
-                        arrowRightDisabled={
-                          <MdKeyboardArrowRight
-                            color="#ddd"
-                            size={"4rem"}
-                            style={{ cursor: "not-allowed" }}
-                          />
-                        }
-                        addArrowClickHandler
-                      >
-                        <ColorInfoContainer disable={true} check={false}>
-                          <ColorContainer background="red" />
-                        </ColorInfoContainer>
-                        <ColorInfoContainer disable={false} check={false}>
-                          <ColorContainer background="gray" />
-                        </ColorInfoContainer>
-                        <ColorInfoContainer disable={false} check={true}>
-                          <ColorContainer background="green" />
-                        </ColorInfoContainer>
-                        <ColorInfoContainer disable={false} check={false}>
-                          <ColorContainer background="yellow" />
-                        </ColorInfoContainer>
-                        <ColorInfoContainer disable={false} check={false}>
-                          <ColorContainer background="black" />
-                        </ColorInfoContainer>
-                        <ColorInfoContainer disable={false} check={false}>
-                          <ColorContainer background="white" />
-                        </ColorInfoContainer>
-                      </Carousel>
-                    </div>
                     <Discount style={{ marginTop: 25 }}>
                       <strong>Selecione o Tamanho:</strong> P
                     </Discount>
@@ -219,17 +162,17 @@ export default function ProductsInfo() {
                         }
                         addArrowClickHandler
                       >
-                        <SizeInfoContainer disable={false} check={false}>
-                          <SizeContainer>P</SizeContainer>
-                          <InfoColor disponible={true}>22</InfoColor>
+                        <SizeInfoContainer disable={false}>
+                          <SizeContainer check={false}>P</SizeContainer>
+                          <InfoColor check={false}>22</InfoColor>
                         </SizeInfoContainer>
-                        <SizeInfoContainer disable={true} check={false}>
-                          <SizeContainer>M</SizeContainer>
-                          <InfoColor disponible={true}>22</InfoColor>
+                        <SizeInfoContainer disable={true}>
+                          <SizeContainer check={false}>M</SizeContainer>
+                          <InfoColor check={false}>22</InfoColor>
                         </SizeInfoContainer>
-                        <SizeInfoContainer disable={false} check={true}>
-                          <SizeContainer>M</SizeContainer>
-                          <InfoColor disponible={true}>22</InfoColor>
+                        <SizeInfoContainer disable={false}>
+                          <SizeContainer check={true}>M</SizeContainer>
+                          <InfoColor check={true}>22</InfoColor>
                         </SizeInfoContainer>
                       </Carousel>
                     </div>
@@ -384,7 +327,14 @@ export default function ProductsInfo() {
                   </div>
                 </div>
                 <div>
-                  <TextArea rows={3} placeholder="Insira seu comentário aqui" />
+                  <TextArea rows={2} placeholder="Insira seu comentário aqui" />
+                  <ReactStars
+                    count={5}
+                    value={0}
+                    onChange={() => {}}
+                    size={24}
+                    activeColor="#ffd700"
+                  />
                   <Buttom full={false} small={true}>
                     <FiSend /> ENVIAR COMENTÁRIO
                   </Buttom>

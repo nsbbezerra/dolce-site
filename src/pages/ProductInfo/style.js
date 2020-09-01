@@ -157,8 +157,7 @@ export const InfoColor = styled.div`
   align-items: center;
   font-family: "Saira Condensed", sans-serif;
   font-size: 1.5rem;
-  color: ${(props) =>
-    props.disponible === true ? general.colors.dark : general.colors.error};
+  color: ${(props) => (props.check === true ? general.colors.success : "#222")};
 `;
 
 export const SizeInfoContainer = styled.div`
@@ -171,8 +170,9 @@ export const SizeInfoContainer = styled.div`
   padding-bottom: 5px;
   flex-direction: column;
   cursor: ${(props) => (props.disable === true ? "not-allowed" : "pointer")};
-  opacity: ${(props) => (props.disable === true ? 0.5 : 1)};
-  background: ${(props) => (props.check === true ? general.colors.gray : "")};
+  opacity: ${(props) => (props.disable === true ? 0.3 : 1)};
+  color: ${(props) =>
+    props.check === true ? general.colors.success : ""} !important;
   &:hover {
     transform: ${(props) =>
       props.disable === true ? "scale(1)" : "scale(1.02)"};
@@ -189,8 +189,11 @@ export const SizeContainer = styled.div`
   width: 40px;
   height: 40px;
   border-radius: 100%;
-  border: 1px solid ${general.colors.dark};
-  color: #222;
+  border-width: 1px;
+  border-style: solid;
+  border-color: ${(props) =>
+    props.check === true ? general.colors.success : general.colors.dark};
+  color: ${(props) => (props.check === true ? general.colors.success : "#222")};
   transition: all 0.3s;
   font-family: "Saira Condensed", sans-serif;
   font-size: 1.5rem;

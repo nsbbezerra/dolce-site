@@ -6,32 +6,20 @@ import {
   Spaced,
   Content,
 } from "../../styles/style";
-import {
-  Label,
-  Input,
-  MaskInput,
-  InfoContainer,
-  TitleCard,
-  GridCity,
-  GridLogradouro,
-  ContainerCheckbox,
-  DescCart,
-} from "../Checkout/style";
+import { TitleCard, ContainerCheckbox, DescCart } from "../Checkout/style";
 import { TitleChart } from "../Chart/style";
 import { useLocation } from "react-router-dom";
 import Collapse from "react-collapsible";
 import { FiPackage } from "react-icons/fi";
-import { FaMoneyCheckAlt } from "react-icons/fa";
 import {
   Trigger,
   GridTrigger,
   GridContainer,
   BtnMore,
-  ContainerSteps,
   SendCode,
+  ContainerSteps,
 } from "./style";
 import Steps, { Step } from "@wenmu/react-steps";
-import general from "../../configs/general";
 
 export default function MyPackagesApp() {
   const { pathname } = useLocation();
@@ -39,19 +27,6 @@ export default function MyPackagesApp() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-
-  function handleColor(status) {
-    switch (status) {
-      case "cancel":
-        return general.colors.negative;
-      case "success":
-        return general.colors.success;
-      case "waiting":
-        return general.colors.gray;
-      default:
-        return general.colors.gray;
-    }
-  }
 
   return (
     <Container>
@@ -63,7 +38,7 @@ export default function MyPackagesApp() {
             <ContainerCheckbox>
               <Collapse
                 trigger={
-                  <Trigger background={handleColor("waiting")}>
+                  <Trigger>
                     <GridTrigger>
                       <div>
                         <FiPackage fontSize={50} />
@@ -114,7 +89,7 @@ export default function MyPackagesApp() {
             <ContainerCheckbox>
               <Collapse
                 trigger={
-                  <Trigger background={handleColor("cancel")}>
+                  <Trigger>
                     <GridTrigger>
                       <div>
                         <FiPackage fontSize={50} />
@@ -165,7 +140,7 @@ export default function MyPackagesApp() {
             <ContainerCheckbox>
               <Collapse
                 trigger={
-                  <Trigger background={handleColor("success")}>
+                  <Trigger>
                     <GridTrigger>
                       <div>
                         <FiPackage fontSize={50} />

@@ -5,7 +5,7 @@ export default function BannerApp() {
   return (
     <Banner
       src={
-        "https://feiravip.com/wp-content/uploads/2019/04/1550581280-banner-home-pv19-v3.jpg"
+        "https://sites.google.com/site/modahastasucasa/_/rsrc/1462950751800/home/banner_1.jpg"
       }
     />
   );
